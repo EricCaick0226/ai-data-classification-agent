@@ -1,0 +1,7 @@
+user_id,username,full_name,email,phone_number,password,id_card,ssn,address,birth_date,user_location,device_id,favorite_color,notes,created_at,updated_at
+U001,alice01,Alice Chen,alice.fake@example.com,555-0101,fake_hash_001,FAKE-ID-001,000-00-0001,123 Fake Street,2001-04-12,New York NY,device_fake_001,blue,prefers email contact,2026-04-01,2026-04-20
+U002,bob_test,Bob Li,bob.fake@example.com,,fake_hash_002,FAKE-ID-002,000-00-0002,,2000-11-03,Brooklyn NY,device_fake_002,green,sometimes do not answer phone call,2026-04-02,2026-04-21
+U003,carol_demo,Carol Wang,carol.fake@example.com,555-0103,fake_hash_003,FAKE-ID-003,000-00-0003,456 Demo Avenue,1999-07-25,Queens NY,device_fake_003,,needs manual review,2026-04-03,2026-04-22
+U004,david_sample,David Zhang,david.fake@example.com,555-0104,fake_hash_004,FAKE-ID-004,000-00-0004,789 Sample Road,2002-01-18,Los Angeles CA,device_fake_004,black,,2026-04-04,2026-04-23
+U005,emma_user,Emma Liu,emma.fake@example.com,,fake_hash_005,FAKE-ID-005,000-00-0005,321 Test Lane,2001-09-09,Chicago IL,device_fake_005,red,student asked to update profile,2026-04-05,2026-04-24
+U006,frank_demo,Frank Wu,frank.fake@example.com,555-0106,fake_hash_006,FAKE-ID-006,000-00-0006,,2000-05-30,Seattle WA,device_fake_006,yellow,may contain sensitive notes,2026-04-06,2026-04-25
