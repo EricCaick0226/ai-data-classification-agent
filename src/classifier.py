@@ -1,4 +1,23 @@
 from rules import classify_field
+
+def calculate_confidence(classification_result):
+    risk_level = classification_result.get("risk_level", "Unknown")
+    needs_review = classification_result.get("needs_review", True)
+
+    base_confidence = {
+        "Critical": 0.95,
+        "High": 0.85,
+        "Medium": 0.75,
+        "Low": 0.65,
+        "Unknown": 0.35
+    }.get(risk_level, 0.35)
+
+    if needs_review and base_confidence > 0.45:
+        base_confidence -= 0.15
+
+    return round(base_confidence, 2)
+
+
 def classify_column(column_info):
     """
     Classify one column based on column information.
@@ -20,6 +39,7 @@ def classify_column(column_info):
         "risk_level": rule_result["risk_level"],
         "reason": rule_result["reason"],
         "recommendation": rule_result["recommendation"],
+        "confidence": calculate_confidence(rule_result),
         "needs_review": rule_result["needs_review"],
     }
 
@@ -57,5 +77,6 @@ if __name__ == "__main__":
         print("等级:", result["risk_level"])
         print("原因:", result["reason"])
         print("建议:", result["recommendation"])
+        print("置信度:", result["confidence"])
         print("是否需要人工复核:", result["needs_review"])
         print("-" * 50)

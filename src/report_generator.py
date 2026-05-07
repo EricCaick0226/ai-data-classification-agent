@@ -25,8 +25,8 @@ def generate_report(results, output_path="reports/classification_report.md"):
     markdown_lines.append("")
     markdown_lines.append("## Field Classification Details")
     markdown_lines.append("")
-    markdown_lines.append("| Field Name | Data Type | Missing Count | Category | Risk Level | Reason | Recommendation | Needs Review |")
-    markdown_lines.append("|---|---|---|---|---|---|---|---|")
+    markdown_lines.append("| Field Name | Data Type | Missing Count | Category | Risk Level | Confidence | Reason | Recommendation | Needs Review |")
+    markdown_lines.append("|---|---|---|---|---|---|---|---|---|")
 
     for item in results:
         markdown_lines.append(
@@ -35,9 +35,10 @@ def generate_report(results, output_path="reports/classification_report.md"):
             f"| {item.get('missing_count')} "
             f"| {item.get('category')} "
             f"| {item.get('risk_level')} "
+            f"| {item.get('confidence')} "
             f"| {item.get('reason')} "
             f"| {item.get('recommendation')} "
-            f"| {item.get('needs_review')} |"
+            f"| {item.get('needs_review')} "
         )
 
     markdown_lines.append("")
