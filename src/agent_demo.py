@@ -29,6 +29,7 @@ def create_plan(csv_path):
         {
             "step": 1,
             "tool_name": "analyze_csv",
+            "purpose": "Extract column metadata from CSV",
             "args": {
                 "file_path": csv_path
             }
@@ -36,11 +37,13 @@ def create_plan(csv_path):
         {
             "step": 2,
             "tool_name": "classify_column",
+            "purpose": "Classify each column and assign risk level",
             "args": "for each column_info from analyze_csv result"
         },
         {
             "step": 3,
             "tool_name": "generate_report",
+            "purpose": "Generate Markdown classification report",
             "args": {
                 "output_path": "reports/classification_report.md"
             }
@@ -48,6 +51,29 @@ def create_plan(csv_path):
     ]
 
     return plan
+
+def build_summary(classification_results, report_path):
+    total_fields = len(classification_results)
+
+    fields_needing_review = sum(
+        1 for result in classification_results
+        if result.get("needs_review") == True
+    )
+
+    high_or_critical_risk_fields = sum(
+        1 for result in classification_results
+        if result.get("risk_level") in ["High", "Critical"]
+    )
+
+    summary = {
+        "total_fields": total_fields,
+        "fields_needing_review": fields_needing_review,
+        "high_or_critical_risk_fields": high_or_critical_risk_fields,
+        "report_path": report_path
+    }
+
+    return summary
+
 
 def run_agent(user_task):
     agent_name = "DataClassificationAgent"
@@ -122,20 +148,27 @@ def run_agent(user_task):
             "details": report_result
         }
 
+    report_path = "reports/classification_report.md"
+    summary = build_summary(classification_results, report_path)
+
     final_result = {
         "agent_name": agent_name,
         "task_type": task_type,
         "status": "success",
-        "csv_path": csv_path,
+        "input": {
+            "user_task": user_task,
+            "csv_path": csv_path
+        },
+        "plan": plan,
         "tools_used": [
             "analyze_csv",
             "classify_column",
             "generate_report"
         ],
-        "field_count": len(classification_results),
-        "report_path": "reports/classification_report.md",
-        "results": classification_results
-    }
+        "summary": summary,
+        "results": classification_results,
+        "message": "CSV data classification completed successfully."
+}
 
     return final_result
 
