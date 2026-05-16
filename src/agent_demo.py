@@ -82,6 +82,7 @@ def run_agent(user_task):
     print("Agent is reading the user task...")
 
     task_type = detect_task_type(user_task)
+    print(f"[Agent] 判断任务类型：{task_type}")
 
     if task_type != "csv_data_classification":
         return {
@@ -92,11 +93,12 @@ def run_agent(user_task):
         }
 
     csv_path = extract_csv_path(user_task)
+    print(f"[Agent] 识别 CSV 路径：{csv_path}")
     plan = create_plan(csv_path)
 
-    print("\nAgent created a plan:")
+    print("\n[Agent] 生成工具调用计划：")
     for step in plan:
-        print(step)
+         print(f"{step['step']}. {step['tool_name']}：{step['purpose']}")
 
     print("\nExecutor is running tools...")
 
@@ -176,6 +178,7 @@ if __name__ == "__main__":
     import json
 
     user_task = get_user_task()
+    print(f"[Agent] 收到任务：{user_task}")
     final_result = run_agent(user_task)
 
     print("\nFinal Agent Result:")
