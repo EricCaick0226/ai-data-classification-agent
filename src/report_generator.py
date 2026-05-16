@@ -38,7 +38,7 @@ def generate_report(results, output_path="reports/classification_report.md"):
             f"| {item.get('confidence')} "
             f"| {item.get('reason')} "
             f"| {item.get('recommendation')} "
-            f"| {item.get('needs_review')} "
+            f"| {item.get('needs_review')} |"
         )
 
     markdown_lines.append("")

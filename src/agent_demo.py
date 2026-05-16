@@ -79,7 +79,7 @@ def run_agent(user_task):
     agent_name = "DataClassificationAgent"
 
     print(f"\nAgent: {agent_name}")
-    print("Agent is reading the user task...")
+    print("[Agent] Agent is reading the user task...")
 
     task_type = detect_task_type(user_task)
     print(f"[Agent] 判断任务类型：{task_type}")
@@ -94,20 +94,26 @@ def run_agent(user_task):
 
     csv_path = extract_csv_path(user_task)
     print(f"[Agent] 识别 CSV 路径：{csv_path}")
+
     plan = create_plan(csv_path)
 
     print("\n[Agent] 生成工具调用计划：")
     for step in plan:
-         print(f"{step['step']}. {step['tool_name']}：{step['purpose']}")
+        print(f"[Agent] {step['step']}. {step['tool_name']}：{step['purpose']}")
 
-    print("\nExecutor is running tools...")
+    print("\n[Agent] 开始执行工具调用计划...")
+
+    print("\n[Executor] Calling tool: analyze_csv")
 
     analyze_result = execute_tool(
         "analyze_csv",
         file_path=csv_path
     )
 
-    if analyze_result["status"] != "success":
+    if analyze_result["status"] == "success":
+        print("[Executor] Tool analyze_csv finished successfully.")
+    else:
+        print("[Executor] Tool analyze_csv failed.")
         return {
             "agent_name": agent_name,
             "task_type": task_type,
@@ -117,6 +123,8 @@ def run_agent(user_task):
         }
 
     column_infos = analyze_result["result"]
+
+    print("\n[Executor] Calling tool: classify_column for each field")
 
     classification_results = []
 
@@ -135,13 +143,20 @@ def run_agent(user_task):
                 "message": classify_result.get("message", "Classification failed.")
             })
 
+    print(f"[Executor] Classified {len(classification_results)} fields successfully.")
+
+    print("\n[Executor] Calling tool: generate_report")
+
     report_result = execute_tool(
         "generate_report",
         results=classification_results,
         output_path="reports/classification_report.md"
     )
 
-    if report_result["status"] != "success":
+    if report_result["status"] == "success":
+        print("[Executor] Report generated: reports/classification_report.md")
+    else:
+        print("[Executor] Tool generate_report failed.")
         return {
             "agent_name": agent_name,
             "task_type": task_type,
@@ -152,6 +167,12 @@ def run_agent(user_task):
 
     report_path = "reports/classification_report.md"
     summary = build_summary(classification_results, report_path)
+
+    print("\n[Agent] 任务完成。")
+    print(f"总字段数：{summary['total_fields']}")
+    print(f"需要人工复核字段数：{summary['fields_needing_review']}")
+    print(f"High / Critical 风险字段数：{summary['high_or_critical_risk_fields']}")
+    print(f"报告路径：{summary['report_path']}")
 
     final_result = {
         "agent_name": agent_name,
@@ -170,7 +191,7 @@ def run_agent(user_task):
         "summary": summary,
         "results": classification_results,
         "message": "CSV data classification completed successfully."
-}
+    }
 
     return final_result
 
