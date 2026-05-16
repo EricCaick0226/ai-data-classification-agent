@@ -1,91 +1,206 @@
-# AI 数据分类分级项目
+# AI Data Classification Agent
 
-`ai-data-classification-agent` 是一个面向实习准备的入门项目。  
-目标是把一个 CSV 文件转成一份可审阅的数据分类分级报告。
+A small Agent-style demo for CSV data classification and risk-level analysis.
 
-## 这个项目要解决什么问题
+This project was built as part of my AI / data internship preparation. The goal is not to build a production-level data governance system, but to understand how an Agent-style workflow can be organized with an Agent, tools, an executor, structured output, and a human-readable report.
 
-给定一个 CSV，系统需要回答：
+## Project Overview
 
-- 每个字段是什么类型的数据
-- 字段属于哪一类数据（如个人信息、敏感信息等）
-- 风险等级是什么（低/中/高）
-- 为什么这样判断
-- 是否建议人工复核
+AI Data Classification Agent takes a user task, checks whether the task is about CSV data classification, analyzes the CSV file, classifies each column, assigns a risk level, and generates a Markdown report.
 
-## 输入与输出
+The current version is mainly rule-based. It does not use LangChain, LangGraph, RAG, vector databases, multi-agent systems, Docker, deployment, or a frontend.
 
-- 输入：一个 CSV 文件
-- 输出：一份 Markdown 报告，包含每个字段的分类、等级、理由和建议
+The focus of this project is the basic structure:
 
-## 核心处理流程
+```text
+User task
+→ Agent
+→ Tool-calling plan
+→ Executor
+→ Tools
+→ Structured result
+→ Markdown report
+```
 
-1. 读取 CSV 文件
-2. 提取字段信息（字段名、数据类型、缺失值、样例值）
-3. 根据规则进行字段类型判断
-4. 完成分类分级并给出理由与建议
-5. 生成 Markdown 报告
+## Problem It Solves
 
-## 项目阶段
+In real data work, a team may need to quickly understand what kinds of fields exist in a dataset.
 
-### 阶段 1：规则版分类器（当前重点）
+For example, a CSV file may contain:
 
-先使用 Python + pandas 做出一个可运行闭环。
+- personal identifiers
+- contact information
+- authentication data
+- location data
+- device identifiers
+- free-text fields that may need manual review
 
-示例规则：
+This project gives a simple way to inspect a CSV file, classify its columns, assign risk levels, and produce a readable report.
 
-- `email` -> 个人信息（PII）-> 中风险
-- `phone_number` -> 个人信息（PII）-> 中风险
-- `password` -> 敏感信息（Sensitive）-> 高风险
-- `id_card` -> 身份证件信息（Confidential）-> 高风险
+## Demo Command
 
-### 阶段 2：增强模糊字段判断
+Run the final Agent demo with:
 
-在规则版分类器完成后，再处理仅靠字段名难以判断的字段。
+```bash
+python src/agent_demo.py
+```
 
-例如：
+Example user input:
 
-- `contact`
-- `user_info`
-- `credential`
-- `identifier`
+```text
+请分析 data/sample_users.csv，并对每个字段做数据分类分级。
+```
 
-这些字段可能无法只靠字段名判断，需要结合样例值和上下文分析。
+## Expected Output
 
-### 阶段 3：工具化封装
+After running the demo, the project should output:
 
-将 CSV 分析、规则分类、报告生成拆成可调用工具，便于组合使用。
+- Agent execution logs
+- a structured JSON-style result
+- a Markdown report at `reports/classification_report.md`
 
-未来这些工具可以包括：
+The logs are for showing the execution process.
 
-- CSV 分析工具
-- 字段分类工具
-- 风险分级工具
-- 报告生成工具
+The JSON-style result is for structured program output and debugging.
 
-### 阶段 4：最小自动化流程
+The Markdown report is for human readers who want to understand the classification results without reading the code.
 
-在前面步骤都稳定后，再把这些能力串成最小自动化流程。
+## Project Structure
 
-流程不追求复杂，只需要能根据任务判断：
+```text
+ai-data-classification-agent/
+├── data/
+│   └── sample_users.csv
+├── notes/
+│   └── 09_final_summary.md
+├── reports/
+│   └── classification_report.md
+├── src/
+│   ├── rules.py
+│   ├── classifier.py
+│   ├── csv_analyzer.py
+│   ├── report_generator.py
+│   ├── tools.py
+│   ├── agent_executor.py
+│   ├── agent_demo.py
+│   ├── main.py
+│   └── llm_classifier.py
+└── README.md
+```
 
-- 是否需要读取 CSV
-- 是否需要执行字段分析
-- 是否需要进行分类分级
-- 是否需要生成报告
-- 哪些字段需要人工复核
+## File Responsibilities
 
-## 当前里程碑
+- `src/rules.py`  
+  Stores the rule-based classification logic and risk-level rules.
 
-当前优先完成阶段 1，先保证最小闭环稳定可用。  
-闭环流程如下：
+- `src/classifier.py`  
+  Contains the core `classify_column()` logic for classifying one column.
 
-CSV 文件  
-↓  
-字段分析  
-↓  
-规则分类  
-↓  
-风险分级  
-↓  
-Markdown 报告  
+- `src/csv_analyzer.py`  
+  Contains `analyze_csv(file_path)`, which reads a CSV file and extracts column information.
+
+- `src/report_generator.py`  
+  Contains `generate_report(results)`, which creates the Markdown classification report.
+
+- `src/tools.py`  
+  Wraps normal Python functions into Agent-callable tools, such as `analyze_csv_tool`, `classify_column_tool`, and `generate_report_tool`.
+
+- `src/agent_executor.py`  
+  Contains `execute_tool()`, which runs tools based on their tool names.
+
+- `src/agent_demo.py`  
+  The final Agent-style demo entry point.
+
+- `src/main.py`  
+  A normal pipeline testing entry point. It is useful for development, but it is not the final demo.
+
+- `src/llm_classifier.py`  
+  Optional LLM or mock LLM interface for future extension.
+
+- `reports/classification_report.md`  
+  The generated human-readable report.
+
+## Agent / Tool / Executor Mapping
+
+In this project, the Agent-style structure is mapped like this:
+
+| Concept | Project Mapping |
+|---|---|
+| Agent | Logic in `src/agent_demo.py` |
+| Executor | `execute_tool()` in `src/agent_executor.py` |
+| Tools | Tool wrappers in `src/tools.py` |
+| Structured Output | Final JSON-style dictionary from `src/agent_demo.py` |
+| Markdown Report | `reports/classification_report.md` |
+
+The Agent receives the user task, detects the task type, extracts the CSV path, creates a tool-calling plan, and summarizes the final result.
+
+The Executor receives a tool name and arguments, then runs the correct tool.
+
+The Tools perform the actual work, such as analyzing the CSV, classifying columns, and generating the report.
+
+## Why This Is an Agent-Style Demo
+
+This project is not only a fixed pandas script.
+
+A normal pipeline would directly run the same functions in the same order.
+
+This demo starts from a user task, detects the task type, creates a plan, calls tools through an executor, and returns a structured result.
+
+The current version is still simple and mainly rule-based, but it follows the basic Agent / Tool / Executor pattern.
+
+## Current Limitations
+
+This project is intentionally small.
+
+Current limitations:
+
+- It is mainly rule-based.
+- It focuses only on CSV data classification.
+- It does not use a real LLM API by default.
+- It is not a general-purpose AI Agent.
+- Ambiguous fields still need manual review.
+- The classification quality depends on the current rule library.
+- It is not a production-level data governance system.
+
+## About the LLM Part
+
+The current version may include an optional or mock LLM interface, but the main demo does not depend on a real LLM API by default.
+
+This is intentional.
+
+The goal at this stage is to understand the Agent-style structure first:
+
+```text
+Agent decides what to do
+Executor runs the selected tool
+Tool performs the actual task
+Structured output records the result
+Report explains the result to humans
+```
+
+A real LLM API can be added later to help with ambiguous fields, but the project does not need to pretend to be more complex than it is.
+
+## Future Improvements
+
+Possible next steps:
+
+- Add a real LLM API for ambiguous field classification.
+- Expand the rule library.
+- Improve analysis based on sample values, not only column names.
+- Add a stricter JSON schema for structured output.
+- Support more file types besides CSV.
+- Add more test datasets.
+
+## Internship Relevance
+
+This project helped me understand the basic structure behind Agent-style systems before jumping into larger frameworks.
+
+Through this project, I practiced:
+
+- breaking a workflow into tools
+- using an executor to call tools
+- separating human-readable output from structured program output
+- explaining how an Agent-style workflow works
+- connecting data classification with privacy and risk review
+
+The project is small, but it gives me a clearer foundation for understanding more advanced AI Agent frameworks later.
