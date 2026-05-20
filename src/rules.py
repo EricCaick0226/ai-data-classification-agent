@@ -269,12 +269,19 @@ def _enrich_candidate_rules(column_info, candidate_rules):
     try:
         from llm_match_profile import enrich_candidate_rules_for_column
     except ImportError:
-        return
+        return {
+            "source": "import_error",
+            "updated_rules": 0,
+        }
 
     try:
-        enrich_candidate_rules_for_column(column_info, candidate_rules)
-    except Exception:
-        return
+        return enrich_candidate_rules_for_column(column_info, candidate_rules)
+    except Exception as exc:
+        return {
+            "source": "error",
+            "updated_rules": 0,
+            "error": str(exc),
+        }
 
 
 def _match_profile_status():
