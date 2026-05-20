@@ -9,9 +9,11 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_INPUT = PROJECT_ROOT / "data" / "sample_column_metadata.csv"
 DEFAULT_RULES = Path("/Users/ericcai/Desktop/internfiles/分类分级标准.xlsx")
 DEFAULT_OUTPUT = PROJECT_ROOT / "reports" / "classification_report.md"
+DEFAULT_BATCH_THRESHOLD = 10
+DEFAULT_BATCH_SIZE = 10
 
 
-def create_plan(input_path, rules_path, output_path):
+def create_plan(input_path, rules_path, output_path, batch_threshold, batch_size):
     return [
         {
             "step": 1,
@@ -28,8 +30,14 @@ def create_plan(input_path, rules_path, output_path):
         {
             "step": 3,
             "tool_name": "classify_column",
-            "purpose": "Use LLM semantic matching against rule candidates for each column.",
-            "args": "for each column_info from read_column_metadata result",
+            "purpose": (
+                "Use single-column LLM classification for small inputs, "
+                "or batch LLM classification for larger inputs."
+            ),
+            "args": {
+                "batch_threshold": batch_threshold,
+                "batch_size": batch_size,
+            },
         },
         {
             "step": 4,
@@ -59,13 +67,29 @@ def build_summary(classification_results, report_path):
     }
 
 
-def run_agent(input_path, rules_path, output_path):
+def run_agent(
+    input_path,
+    rules_path,
+    output_path,
+    batch_threshold=DEFAULT_BATCH_THRESHOLD,
+    batch_size=DEFAULT_BATCH_SIZE,
+):
+    batch_threshold, batch_size = _normalize_batch_settings(
+        batch_threshold=batch_threshold,
+        batch_size=batch_size,
+    )
     agent_name = "ColumnClassificationAgent"
 
     print(f"\nAgent: {agent_name}")
     print("[Agent] Building a single-task column classification plan...")
 
-    plan = create_plan(input_path, rules_path, output_path)
+    plan = create_plan(
+        input_path=input_path,
+        rules_path=rules_path,
+        output_path=output_path,
+        batch_threshold=batch_threshold,
+        batch_size=batch_size,
+    )
     for step in plan:
         print(f"[Agent] {step['step']}. {step['tool_name']}: {step['purpose']}")
 
@@ -89,36 +113,12 @@ def run_agent(input_path, rules_path, output_path):
         f"{len(rule_catalog.level_rules)} level rules."
     )
 
-    print("\n[Executor] Calling tool: classify_column for each column")
-    classification_results = []
-    for column_info in column_infos:
-        classify_result = execute_tool(
-            "classify_column",
-            column_info=column_info,
-            rule_catalog=rule_catalog,
-        )
-
-        if classify_result["status"] == "success":
-            classification_results.append(classify_result["result"])
-        else:
-            classification_results.append(
-                {
-                    "table_name": column_info.get("table_name", ""),
-                    "column_name": column_info.get("column_name", ""),
-                    "column_type": column_info.get("column_type", ""),
-                    "column_description": column_info.get("column_description", ""),
-                    "classification_path": "",
-                    "security_level": "",
-                    "level_name": "",
-                    "sharing_policy": "",
-                    "open_policy": "",
-                    "basis": "分类工具调用失败，需要人工复核。",
-                    "confidence": 0,
-                    "review_required": True,
-                    "failure_reason": classify_result.get("message", "Classification failed."),
-                    "candidate_paths": [],
-                }
-            )
+    classification_results = _classify_columns(
+        column_infos=column_infos,
+        rule_catalog=rule_catalog,
+        batch_threshold=batch_threshold,
+        batch_size=batch_size,
+    )
 
     print(f"[Executor] Processed {len(classification_results)} columns.")
 
@@ -146,18 +146,91 @@ def run_agent(input_path, rules_path, output_path):
         "input": {
             "column_metadata_path": input_path,
             "rule_excel_path": rules_path,
+            "batch_threshold": batch_threshold,
+            "batch_size": batch_size,
         },
         "plan": plan,
         "tools_used": [
             "read_column_metadata",
             "load_rule_catalog",
-            "classify_column",
+            "classify_column" if len(column_infos) <= batch_threshold else "classify_columns",
             "generate_report",
         ],
         "summary": summary,
         "results": classification_results,
         "message": "Column classification completed.",
     }
+
+
+def _classify_columns(column_infos, rule_catalog, batch_threshold, batch_size):
+    if len(column_infos) <= batch_threshold:
+        print("\n[Executor] Calling tool: classify_column for each column")
+        classification_results = []
+        for column_info in column_infos:
+            classify_result = execute_tool(
+                "classify_column",
+                column_info=column_info,
+                rule_catalog=rule_catalog,
+            )
+
+            if classify_result["status"] == "success":
+                classification_results.append(classify_result["result"])
+            else:
+                classification_results.append(
+                    _classification_error_result(
+                        column_info=column_info,
+                        failure_reason=classify_result.get("message", "Classification failed."),
+                    )
+                )
+
+        return classification_results
+
+    print(
+        "\n[Executor] Calling tool: classify_columns "
+        f"in batches of {batch_size}"
+    )
+    classify_result = execute_tool(
+        "classify_columns",
+        column_infos=column_infos,
+        rule_catalog=rule_catalog,
+        batch_size=batch_size,
+    )
+
+    if classify_result["status"] == "success":
+        return classify_result["result"]
+
+    return [
+        _classification_error_result(
+            column_info=column_info,
+            failure_reason=classify_result.get("message", "Batch classification failed."),
+        )
+        for column_info in column_infos
+    ]
+
+
+def _classification_error_result(column_info, failure_reason):
+    return {
+        "table_name": column_info.get("table_name", ""),
+        "column_name": column_info.get("column_name", ""),
+        "column_type": column_info.get("column_type", ""),
+        "column_description": column_info.get("column_description", ""),
+        "classification_path": "",
+        "security_level": "",
+        "level_name": "",
+        "sharing_policy": "",
+        "open_policy": "",
+        "basis": "分类工具调用失败，需要人工复核。",
+        "confidence": 0,
+        "review_required": True,
+        "failure_reason": failure_reason,
+        "candidate_paths": [],
+    }
+
+
+def _normalize_batch_settings(batch_threshold, batch_size):
+    batch_threshold = max(0, int(batch_threshold))
+    batch_size = max(1, int(batch_size))
+    return batch_threshold, batch_size
 
 
 def _error_result(agent_name, message, details):
@@ -187,6 +260,21 @@ def parse_args():
         "--output",
         default=None,
         help="Markdown report output path.",
+    )
+    parser.add_argument(
+        "--batch-threshold",
+        type=int,
+        default=DEFAULT_BATCH_THRESHOLD,
+        help=(
+            "Use single-column classification at or below this many columns; "
+            "use batch classification above it."
+        ),
+    )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=DEFAULT_BATCH_SIZE,
+        help="Number of columns per LLM batch when batch classification is enabled.",
     )
     return parser.parse_args()
 
@@ -221,6 +309,8 @@ if __name__ == "__main__":
         input_path=input_path,
         rules_path=rules_path,
         output_path=output_path,
+        batch_threshold=args.batch_threshold,
+        batch_size=args.batch_size,
     )
 
     print("\nFinal Agent Result:")

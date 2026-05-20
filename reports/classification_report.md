@@ -2,30 +2,3032 @@
 
 ## 汇总
 
-- Total columns: 6
-- Classified columns: 5
-- Review required columns: 1
-
-## 等级统计
-
-| Security Level | Count |
-|---|---:|
-| 3级 | 3 |
-| 4级 | 2 |
+- Total columns: 1508
+- Classified columns: 0
+- Review required columns: 1508
 
 ## 需要人工复核
 
 | Table | Column | Reason | Candidate Paths |
 |---|---|---|---|
-| medical_settlement | created_at | LLM confidence is below threshold. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| patient_profile_01 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_01 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_01 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | diagnosis_result_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_01 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_01 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_01 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_01 | nursing_notes_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_01 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_01 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_01 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_01 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_01 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_01 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_01 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_01 | sample_type_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_01 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_01 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | self_pay_amount_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_01 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | followup_notes | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| staff_info_01 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | department_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_01 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_01 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_01 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_01 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_01 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_01 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_01 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_01 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_01 | remote_diagnosis_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_01 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_01 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_01 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_01 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | phone_number_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_01 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | treatment_plan | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | visit_time_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_01 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_01 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_01 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_01 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_01 | frequency_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_01 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_01 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_01 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_01 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_01 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_01 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_01 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | imaging_diagnosis_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_01 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_01 | followup_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| public_health_followup_01 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | blood_pressure_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_01 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_01 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_01 | operator_id_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_01 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_01 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_01 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_01 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_01 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_01 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_01 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_01 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_01 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_01 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | gene_variant_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_01 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_01 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_01 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | guardian_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_01 | emergency_contact_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_01 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | surgery_record_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_01 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_01 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_01 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_01 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | drug_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| medical_order_01 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_01 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_01 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_01 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_01 | lab_result_value_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_01 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_01 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_01 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_01 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_01 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_01 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | insurance_type_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_01 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_01 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_01 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_01 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_01 | staff_id_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_01 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_01 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_01 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_01 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_01 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_01 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_01 | device_id_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_01 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_01 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_01 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_01 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_01 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_01 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_01 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_01 | patient_id_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | patient_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_01 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_01 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_01 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_01 | treatment_plan_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_01 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_01 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | surgery_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_01 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_01 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_01 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_01 | order_id_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_01 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_01 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_01 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_01 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_01 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_02 | report_time_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_02 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | settlement_time_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_02 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_02 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | staff_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| staff_info_02 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | staff_phone_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_02 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_02 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_02 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_02 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_02 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_02 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_02 | drug_delivery_address_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_02 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_02 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_02 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_02 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | home_address_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_02 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_02 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_02 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_02 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_02 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_02 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_02 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_02 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | admission_no_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_02 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_02 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_02 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_02 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_02 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_02 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_02 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_02 | prescription_text_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_02 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_02 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_02 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_02 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | dicom_uid_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_02 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_02 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | blood_pressure | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| public_health_followup_02 | blood_glucose_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_02 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_02 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | operation_type_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_02 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_02 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_02 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_02 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_02 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_02 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_02 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_02 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | clinical_trial_group_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_02 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_02 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_02 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_02 | visit_no_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_02 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_02 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_02 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_02 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_02 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_02 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_02 | blood_transfusion_record_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_02 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_02 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_02 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_02 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_02 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_02 | frequency | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| medical_order_02 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_02 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_02 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_02 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | reference_range_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_02 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_02 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | total_amount_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | insurance_amount | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_02 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_02 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_02 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | staff_name_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_02 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | operation_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_02 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_02 | online_consultation_id_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_02 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_02 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_02 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_02 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_02 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_02 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_02 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | patient_name_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_02 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | phone_number | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_02 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_02 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_02 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_02 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_02 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_02 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_02 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_02 | doctor_name_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_02 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_02 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_02 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_02 | allergy_history | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_02 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_02 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_02 | drug_name_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_02 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_02 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_02 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_02 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_02 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_02 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_02 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_02 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | exam_part_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_02 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_02 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_02 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_02 | followup_id_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_02 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_02 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | department | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| staff_info_02 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_02 | performance_score_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_02 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_02 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_02 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_03 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_03 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_03 | online_payment_no_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_03 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_03 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_03 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_03 | birth_date_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_03 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | admission_diagnosis_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_03 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_03 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_03 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_03 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_03 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_03 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_03 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_03 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_03 | pharmacist_review_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_03 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_03 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | sample_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | exam_device_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_03 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_03 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | mental_health_status_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| public_health_followup_03 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_03 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_03 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_03 | operation_time_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_03 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_03 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_03 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_03 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | sample_barcode_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_03 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_03 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_03 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | chief_complaint_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_03 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_03 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_03 | allergy_history_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_03 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_03 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_03 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_03 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_03 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_03 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_03 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_03 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | abnormal_flag_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_03 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_03 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | insurance_amount_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | settlement_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| public_health_followup_03 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_03 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | practice_certificate_no_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_03 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_03 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_03 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | consultation_text_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_03 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_03 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_03 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_03 | id_card_no_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_03 | birth_date | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_03 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_03 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | department_name_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_03 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_03 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_03 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_03 | order_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| medical_order_03 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_03 | dosage_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_03 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_03 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_03 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_03 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_03 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_03 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_03 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | imaging_finding_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_03 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_03 | settlement_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_03 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_03 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_03 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | chronic_disease_type_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_03 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_03 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_03 | performance_score | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | log_id_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_03 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_03 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_03 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_03 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_03 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_03 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_03 | research_subject_id_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_03 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_03 | patient_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_03 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_03 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_03 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | guardian_name_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_03 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_03 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_03 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_03 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | discharge_diagnosis_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_03 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_04 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_04 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_04 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_04 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_04 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_04 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_04 | lab_item_name_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_04 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_04 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_04 | settlement_id_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_04 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | followup_notes_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_04 | staff_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| staff_info_04 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_04 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_04 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_04 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_04 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_04 | ip_address_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_04 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_04 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_04 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_04 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_04 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_04 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_04 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | deidentified_note_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_04 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_04 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_04 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_04 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_04 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_04 | diagnosis_result_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_04 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_04 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_04 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_04 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_04 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_04 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_04 | nursing_notes_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_04 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_04 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_04 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_04 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_04 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | sample_type_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_04 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_04 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | self_pay_amount_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_04 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| public_health_followup_04 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_04 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | department_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_04 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_04 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_04 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_04 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_04 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_04 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_04 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_04 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_04 | remote_diagnosis_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_04 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_04 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_04 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_04 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_04 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | phone_number_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_04 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | emergency_contact | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_04 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_04 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_04 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_04 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_04 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_04 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_04 | visit_time_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_04 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_04 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_04 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_04 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | dosage | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| medical_order_04 | frequency_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_04 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_04 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_04 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_04 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | imaging_diagnosis_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_04 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | total_amount | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_04 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_04 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | blood_pressure_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_04 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_04 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_04 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_04 | operator_id_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_04 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_04 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_04 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_04 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_04 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_04 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_04 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_04 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_04 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_04 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | gene_variant_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_04 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_04 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_04 | id_card_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_04 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_04 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_04 | emergency_contact_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_04 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_04 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_04 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_04 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_04 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_04 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_04 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | surgery_record_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_04 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_04 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_04 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_04 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_04 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_04 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_04 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_04 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_04 | lab_result_value_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_04 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_04 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_04 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_04 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | insurance_type_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_04 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_04 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_04 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_05 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| staff_info_05 | staff_id_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_05 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | operation_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_05 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_05 | device_id_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | patient_id_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理 |
+| patient_profile_05 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_05 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_05 | treatment_plan_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_05 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | surgery_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理 |
+| inpatient_record_05 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| medical_order_05 | order_id_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_05 | drug_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_05 | dosage | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_05 | frequency | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_05 | prescription_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_05 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_05 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_05 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| lab_result_05 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| lab_result_05 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| lab_result_05 | sample_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_05 | report_time_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| insurance_settlement_05 | settlement_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | insurance_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | total_amount | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | insurance_amount | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | settlement_time_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_05 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放 |
+| public_health_followup_05 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | blood_glucose | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| public_health_followup_05 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| staff_info_05 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | staff_phone_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_05 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | operation_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_05 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_05 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | drug_delivery_address_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理 |
+| patient_profile_05 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | home_address_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_05 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | chief_complaint | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_05 | treatment_plan | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_05 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | admission_no_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | surgery_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理 |
+| inpatient_record_05 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| medical_order_05 | order_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_05 | drug_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_05 | dosage | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_05 | frequency | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_05 | prescription_text_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| medical_order_05 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_05 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_05 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| lab_result_05 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| lab_result_05 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| lab_result_05 | sample_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_05 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | dicom_uid_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| insurance_settlement_05 | settlement_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | insurance_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | total_amount | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | insurance_amount | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| insurance_settlement_05 | settlement_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_05 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放 |
+| public_health_followup_05 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | blood_glucose_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| staff_info_05 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_05 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | operation_type_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_05 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_05 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | clinical_trial_group_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理 |
+| patient_profile_05 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | home_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | visit_no_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_05 | treatment_plan | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_05 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_05 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | surgery_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理 |
+| inpatient_record_05 | blood_transfusion_record_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_05 | nursing_notes | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| medical_order_05 | order_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_05 | drug_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_05 | dosage | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_05 | frequency | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_05 | prescription_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_05 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_05 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_05 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| lab_result_05 | reference_range_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| lab_result_05 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| lab_result_05 | sample_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_05 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| imaging_exam_05 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| insurance_settlement_05 | settlement_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | insurance_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | total_amount_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | insurance_amount | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_05 | settlement_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_05 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放 |
+| public_health_followup_05 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| public_health_followup_05 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| staff_info_05 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | staff_name_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | staff_phone | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| staff_info_05 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_05 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | operation_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_05 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| system_audit_log_05 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_05 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | online_consultation_id_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| internet_health_service_05 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| research_dataset_05 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | patient_name_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理 |
+| patient_profile_05 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_05 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| patient_profile_05 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告; 业务资源 / 公共卫生 / 妇幼保健 / 5岁以下儿童死亡报告 |
+| outpatient_visit_06 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_06 | doctor_name_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_06 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_06 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_06 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_06 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | drug_name_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_06 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_06 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_06 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_06 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_06 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | exam_part_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_06 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_06 | followup_id_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | followup_notes | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| staff_info_06 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | performance_score_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_06 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_06 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_06 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_06 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_06 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_06 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_06 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_06 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_06 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_06 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_06 | online_payment_no_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_06 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_06 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_06 | birth_date_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | treatment_plan | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | admission_diagnosis_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_06 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_06 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_06 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_06 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_06 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_06 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | pharmacist_review_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_06 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_06 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | exam_device_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_06 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | insurance_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_06 | followup_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| public_health_followup_06 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | mental_health_status_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_06 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | practice_certificate_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_06 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_06 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_06 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_06 | operation_time_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_06 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_06 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_06 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_06 | consultation_text | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_06 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_06 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_06 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_06 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | sample_barcode_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_06 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
+| patient_profile_06 | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_06 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | guardian_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_06 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | chief_complaint_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_06 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | department_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | surgery_record | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_06 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_06 | allergy_history_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_06 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_06 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | drug_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| medical_order_06 | dosage | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_06 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_06 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_06 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_06 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | abnormal_flag_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_06 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | imaging_finding | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_06 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | insurance_type | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_06 | total_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | insurance_amount_backup | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | self_pay_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| insurance_settlement_06 | settlement_time | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| public_health_followup_06 | followup_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | chronic_disease_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | blood_pressure | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | blood_glucose | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | mental_health_status | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| public_health_followup_06 | followup_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 血液冻结; 业务资源 / 公共卫生 / 血液管理 / 报废血管理; 业务资源 / 公共卫生 / 血液管理 / 血液发放; 业务资源 / 公共卫生 / 血液管理 / 库存信息; 业务资源 / 公共卫生 / 血液管理 / 用血直免 |
+| staff_info_06 | staff_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | staff_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | practice_certificate_no_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | department | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | staff_phone | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息 |
+| staff_info_06 | performance_score | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息; 基础资源 / 服务范围与对象 / 医务人员 / 医务人员敏感信息; 业务资源 / 综合管理 / 绩效考核 / 个人绩效评估; 业务资源 / 综合管理 / 绩效考核 / 机构绩效评估; 业务资源 / 医疗服务(医院) / 运营管理 / 绩效考核 |
+| system_audit_log_06 | log_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_06 | operator_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_06 | operation_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| system_audit_log_06 | operation_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| system_audit_log_06 | ip_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| system_audit_log_06 | device_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| internet_health_service_06 | online_consultation_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_06 | consultation_text_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_06 | remote_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 远程医疗 / 远程会诊; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| internet_health_service_06 | drug_delivery_address | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| internet_health_service_06 | online_payment_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+药品供应保障服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务; 主题资源 / 其他数据库 / 互联网+医疗健康 / 其他 |
+| research_dataset_06 | research_subject_id | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | gene_variant | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | clinical_trial_group | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | sample_barcode | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| research_dataset_06 | deidentified_note | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_06 | patient_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | patient_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| patient_profile_06 | id_card_no_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | phone_number | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | home_address | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
+| patient_profile_06 | birth_date | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | guardian_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| patient_profile_06 | emergency_contact | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | visit_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | chief_complaint | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| outpatient_visit_06 | treatment_plan | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
+| outpatient_visit_06 | doctor_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | department_name_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| outpatient_visit_06 | visit_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | admission_no | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | admission_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | discharge_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | surgery_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| inpatient_record_06 | blood_transfusion_record | DASHSCOPE_API_KEY is not set. | 主题资源 / 其他数据库 / 电子健康档案摘要 / 输血记录摘要; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| inpatient_record_06 | allergy_history | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| inpatient_record_06 | nursing_notes | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 临床服务 / 护理记录; 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_order_06 | order_id | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | drug_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | dosage_backup | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理; 主题资源 / 其他数据库 / 电子健康档案摘要 / 用药记录摘要 |
+| medical_order_06 | frequency | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口; 业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理 |
+| medical_order_06 | prescription_text | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| medical_order_06 | pharmacist_review | DASHSCOPE_API_KEY is not set. | 基础资源 / 卫生健康信息化 / 数据接口 / 医疗信息类数据接口 |
+| lab_result_06 | lab_item_name | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表 |
+| lab_result_06 | lab_result_value | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | reference_range | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | abnormal_flag | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| lab_result_06 | sample_type | DASHSCOPE_API_KEY is not set. | 业务资源 / 公共卫生 / 血液管理 / 库存信息 |
+| lab_result_06 | report_time | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | exam_part | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | imaging_finding_backup | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | imaging_diagnosis | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | dicom_uid | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| imaging_exam_06 | exam_device | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| insurance_settlement_07 | settlement_id | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
+| unknown_table | notes | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 其他; 基础资源 / 服务范围与对象 / 患者 / 患者信息; 业务资源 / 医疗保障 / 城镇居民基本医疗保险 / 其他; 业务资源 / 综合监督 / 其他; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| unknown_table | remark | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| unknown_table | name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
+| unknown_table | code | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| unknown_table | created_at | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| unknown_table | updated_at | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| unknown_table | extra_json | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医用设备表; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 预防接种卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 职业病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 食源性疾病报告卡; 主题资源 / 电子健康档案数据库 / 健康档案基本数据集 / 健康体检 |
+| unknown_table | location | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子病历数据库 / 基础字典 / 医疗机构信息表 |
 
 ## Column 分类分级明细
 
 | Table | Column | Type | Description | Classification Path | Security Level | Level Name | Sharing Policy | Open Policy | Basis | Confidence | Review Required |
 |---|---|---|---|---|---|---|---|---|---|---:|---|
-| patient | patient_name | varchar | 患者姓名用于医疗服务中的身份确认 | 基础资源 / 服务范围与对象 / 患者 / 患者信息 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | patient_name 是患者身份识别的基本字段，用于医疗服务中的身份确认，符合‘患者信息’定义中‘身份识别、基本资料’和‘确保身份确认与沟通’的描述，且不涉及病历、诊断等敏感内容，故不属于4级敏感信息。 | 0.98 | False |
-| patient | id_card_no | varchar | 患者身份证件号码 | 基础资源 / 服务范围与对象 / 患者 / 患者信息 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | 身份证件号码属于患者身份识别类基本资料，用于身份确认，符合'患者信息'定义；虽具敏感性，但未达到病历、诊断等高度私密程度，故不适用4级敏感信息分类 | 0.95 | False |
-| patient | diagnosis_result | text | 患者诊断结果 | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 | 4级 | 一般数据4级 | 有条件共享 | 不予开放 | diagnosis_result 字段明确表示患者诊断结果，属于病历类高度私密数据，符合候选规则中'患者敏感信息'定义 | 0.98 | False |
-| patient | treatment_plan | text | 患者治疗方案 | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 | 4级 | 一般数据4级 | 有条件共享 | 不予开放 | treatment_plan（治疗方案）属于患者高度私密的医疗数据，直接关联诊疗决策与健康状况，符合‘患者敏感信息’定义中‘诊断结果、治疗方案等高度私密数据’的描述。 | 0.98 | False |
-| medical_settlement | insurance_amount | decimal | 医保结算金额 | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | 字段名为insurance_amount，描述为医保结算金额，直接关联医保结算业务，属于医保接口管理范畴 | 0.95 | False |
-| medical_settlement | created_at | datetime | 记录创建时间 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | diagnosis_result_backup | text | 门诊诊断结果。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | admission_diagnosis | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | nursing_notes_backup | text | 护理记录内容。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | sample_type_backup | varchar | 样本类型。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | report_time | datetime |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | self_pay_amount_backup | decimal | 个人自付金额。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | followup_notes | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | department_backup | varchar | 所属科室。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | remote_diagnosis_backup | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | online_payment_no | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | phone_number_backup | varchar | 患者联系电话。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | treatment_plan | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | visit_time_backup | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | frequency_backup | varchar | 用药频次。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | lab_item_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | imaging_diagnosis_backup | text | 影像诊断结论。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | followup_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | blood_pressure_backup | varchar | 血压记录。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | department | varchar | 所属科室。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | operator_id_backup | varchar | 操作人账号。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | device_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | gene_variant_backup | text | 基因变异检测结果。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | guardian_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | emergency_contact_backup | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | surgery_record_backup | text | 手术过程记录。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | drug_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | lab_result_value_backup | varchar | 检验结果值。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_01 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | insurance_type_backup | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_01 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_01 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | staff_id_backup | varchar | 医务人员编号。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | department | varchar | 所属科室。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_01 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | log_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_01 | device_id_backup | varchar | 访问设备标识。业务域：系统审计。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_01 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_01 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | patient_id_backup | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | patient_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_01 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | treatment_plan_backup | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_01 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | surgery_record | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_01 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | order_id_backup | varchar | 医嘱编号。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_01 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_01 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：01 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | report_time_backup | datetime | 检验报告时间。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | imaging_finding | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | settlement_time_backup | datetime | 医保结算时间。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | department | varchar | 所属科室。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_phone_backup | varchar | 医务人员联系电话。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | drug_delivery_address_backup | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | gene_variant | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | home_address_backup | varchar | 患者居住地址。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | department_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | admission_no_backup | varchar | 住院号。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | prescription_text_backup | text | 处方明细文本。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | reference_range | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | dicom_uid_backup | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | blood_pressure | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | blood_glucose_backup | varchar | 血糖记录。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | department | varchar | 所属科室。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operation_type_backup | varchar | 操作类型。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | consultation_text | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | clinical_trial_group_backup | varchar | 临床试验分组。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | visit_no_backup | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | blood_transfusion_record_backup | text | 输血记录摘要。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | frequency | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | reference_range_backup | varchar | 参考范围。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | total_amount_backup | decimal | 医疗费用总金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | insurance_amount | decimal |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_name_backup | varchar | 医务人员姓名。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | department | varchar | 所属科室。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operation_type | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | online_consultation_id_backup | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_02 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_02 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | patient_name_backup | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | phone_number | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_02 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | doctor_name_backup | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_02 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | allergy_history | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_02 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | drug_name_backup | varchar | 药品名称。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_02 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_02 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | exam_part_backup | varchar | 检查部位。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | dicom_uid | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_02 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_02 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | followup_id_backup | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_02 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | department | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_02 | performance_score_backup | decimal | 绩效考核分数。业务域：医务人员。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_02 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：02 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | online_payment_no_backup | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | sample_barcode | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | birth_date_backup | date | 患者出生日期。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | admission_no | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | admission_diagnosis_backup | text | 入院诊断信息。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | pharmacist_review_backup | text | 药师审核意见。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | sample_type | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | exam_device_backup | varchar | 检查设备名称。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | mental_health_status_backup | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | department | varchar | 所属科室。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | operation_time_backup | datetime | 操作时间。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | drug_delivery_address | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | sample_barcode_backup | varchar | 生物样本条码。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | chief_complaint_backup | text | 患者主诉内容。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | diagnosis_result | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | allergy_history_backup | text | 患者过敏史。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | pharmacist_review | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | abnormal_flag_backup | varchar | 异常标识。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | insurance_amount_backup | decimal | 医保支付金额。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | settlement_time | datetime |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | practice_certificate_no_backup | varchar | 执业资格证书编号。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | department | varchar | 所属科室。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | ip_address | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | consultation_text_backup | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | id_card_no_backup | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | birth_date | date |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | department_name_backup | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | order_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | dosage_backup | varchar | 用药剂量。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_03 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_03 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | imaging_finding_backup | text | 影像所见描述。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_03 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | settlement_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_03 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | chronic_disease_type_backup | varchar | 慢病类型。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_03 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | department | varchar | 所属科室。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_03 | performance_score | decimal |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | log_id_backup | varchar | 系统日志编号。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_03 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_03 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | research_subject_id_backup | varchar | 科研受试者编号。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_03 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | patient_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | guardian_name_backup | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_03 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_03 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | discharge_diagnosis_backup | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_03 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：03 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | lab_item_name_backup | varchar | 检验项目名称。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | exam_part | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | settlement_id_backup | varchar | 医保结算编号。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | followup_notes_backup | text | 随访备注。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | staff_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | department | varchar | 所属科室。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | ip_address_backup | varchar | 访问 IP 地址。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | research_subject_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | deidentified_note_backup | text | 脱敏后的研究备注。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | diagnosis_result_backup | text | 门诊诊断结果。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | doctor_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | nursing_notes_backup | text | 护理记录内容。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | lab_result_value | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | sample_type_backup | varchar | 样本类型。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | self_pay_amount_backup | decimal | 个人自付金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | chronic_disease_type | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | department_backup | varchar | 所属科室。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | online_consultation_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | remote_diagnosis_backup | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | phone_number_backup | varchar | 患者联系电话。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | emergency_contact | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | visit_time_backup | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | dosage | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | frequency_backup | varchar | 用药频次。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | imaging_diagnosis_backup | text | 影像诊断结论。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | total_amount | decimal |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | blood_pressure_backup | varchar | 血压记录。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | department | varchar | 所属科室。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_04 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | operator_id_backup | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_04 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_04 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | gene_variant_backup | text | 基因变异检测结果。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_04 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | id_card_no | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_04 | emergency_contact_backup | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_04 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | surgery_record_backup | text | 手术过程记录。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | blood_transfusion_record | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_04 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_04 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | lab_result_value_backup | varchar | 检验结果值。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_04 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | imaging_diagnosis | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_04 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | insurance_type_backup | varchar | 医保类型。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_04 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_04 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：04 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_id_backup | varchar | 医务人员编号。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | practice_certificate_no | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | department | varchar | 所属科室。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | device_id_backup | varchar | 访问设备标识。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | clinical_trial_group | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | patient_id_backup | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | treatment_plan_backup | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | visit_time | datetime |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | order_id_backup | varchar | 医嘱编号。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | abnormal_flag | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | report_time_backup | datetime | 检验报告时间。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | settlement_time_backup | datetime | 医保结算时间。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | blood_glucose | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | department | varchar | 所属科室。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_phone_backup | varchar | 医务人员联系电话。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | remote_diagnosis | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | drug_delivery_address_backup | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | home_address_backup | varchar | 患者居住地址。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | chief_complaint | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | admission_no_backup | varchar | 住院号。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | prescription_text_backup | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | dicom_uid_backup | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | self_pay_amount | decimal |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | blood_glucose_backup | varchar | 血糖记录。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | department | varchar | 所属科室。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operation_type_backup | varchar | 操作类型。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operation_time | datetime |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | clinical_trial_group_backup | varchar | 临床试验分组。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | home_address | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | visit_no_backup | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_05 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | blood_transfusion_record_backup | text | 输血记录摘要。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_05 | nursing_notes | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_05 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | reference_range_backup | varchar | 参考范围。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_05 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_05 | exam_device | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | total_amount_backup | decimal | 医疗费用总金额。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_05 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_05 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_name_backup | varchar | 医务人员姓名。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | department | varchar | 所属科室。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | staff_phone | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_05 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_05 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | online_consultation_id_backup | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_05 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_05 | deidentified_note | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | patient_name_backup | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_05 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：05 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | doctor_name_backup | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | admission_diagnosis | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | drug_name_backup | varchar | 药品名称。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | report_time | datetime |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | exam_part_backup | varchar | 检查部位。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | followup_id_backup | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | followup_notes | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | department | varchar | 所属科室。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | performance_score_backup | decimal | 绩效考核分数。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | online_payment_no_backup | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | birth_date_backup | date | 患者出生日期。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | treatment_plan | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | admission_diagnosis_backup | text | 入院诊断信息。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | pharmacist_review_backup | text | 药师审核意见。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | lab_item_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | exam_device_backup | varchar | 检查设备名称。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | insurance_type | varchar | 医保类型。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | insurance_amount | decimal | 医保支付金额。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | followup_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | mental_health_status_backup | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | practice_certificate_no | varchar | 执业资格证书编号。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | department | varchar | 所属科室。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | log_id | varchar | 系统日志编号。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | operation_time_backup | datetime | 操作时间。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | device_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | consultation_text | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | sample_barcode_backup | varchar | 生物样本条码。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | patient_name | varchar | 患者姓名，用于医疗服务身份确认。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | id_card_no | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | guardian_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | chief_complaint_backup | text | 患者主诉内容。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | department_name | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | surgery_record | text | 手术过程记录。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | allergy_history_backup | text | 患者过敏史。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | drug_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | dosage | varchar | 用药剂量。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | abnormal_flag_backup | varchar | 异常标识。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | imaging_finding | text | 影像所见描述。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | insurance_type | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | total_amount | decimal | 医疗费用总金额。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | insurance_amount_backup | decimal | 医保支付金额。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | self_pay_amount | decimal | 个人自付金额。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_06 | settlement_time | datetime | 医保结算时间。业务域：医保结算。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | followup_id | varchar | 公共卫生随访编号。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | chronic_disease_type | varchar | 慢病类型。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | blood_pressure | varchar | 血压记录。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | blood_glucose | varchar | 血糖记录。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | mental_health_status | text | 心理健康状态描述。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| public_health_followup_06 | followup_notes | text | 随访备注。业务域：公共卫生随访。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | staff_id | varchar | 医务人员编号。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | staff_name | varchar | 医务人员姓名。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | practice_certificate_no_backup | varchar | 执业资格证书编号。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | department | varchar | 所属科室。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | staff_phone | varchar | 医务人员联系电话。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| staff_info_06 | performance_score | decimal | 绩效考核分数。业务域：医务人员。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | log_id | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | operator_id | varchar | 操作人账号。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | operation_type | varchar | 操作类型。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | operation_time | datetime | 操作时间。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | ip_address | varchar | 访问 IP 地址。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| system_audit_log_06 | device_id | varchar | 访问设备标识。业务域：系统审计。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | online_consultation_id | varchar | 互联网问诊编号。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | consultation_text_backup | text | 在线问诊交流文本。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | remote_diagnosis | text | 远程会诊诊断意见。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | drug_delivery_address | varchar | 互联网药品配送地址。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| internet_health_service_06 | online_payment_no | varchar | 在线支付流水号。业务域：互联网医疗。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | research_subject_id | varchar | 科研受试者编号。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | gene_variant | text | 基因变异检测结果。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | clinical_trial_group | varchar | 临床试验分组。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | sample_barcode | varchar | 生物样本条码。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| research_dataset_06 | deidentified_note | text | 脱敏后的研究备注。业务域：医学研究。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | patient_id | varchar | 患者唯一编号，用于院内系统识别患者身份。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | patient_name | varchar |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | id_card_no_backup | varchar | 患者身份证件号码。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | phone_number | varchar | 患者联系电话。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | home_address | varchar | 患者居住地址。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | birth_date | date | 患者出生日期。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | guardian_name | varchar | 未成年人监护人姓名。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient_profile_06 | emergency_contact | varchar | 紧急联系人信息。业务域：患者基本信息。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | visit_no | varchar | 门诊就诊流水号。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | chief_complaint | text | 患者主诉内容。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | diagnosis_result | text | 门诊诊断结果。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | treatment_plan | text | 医生制定的治疗方案。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | doctor_name | varchar | 接诊医生姓名。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | department_name_backup | varchar | 就诊科室名称。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| outpatient_visit_06 | visit_time | datetime | 门诊就诊时间。业务域：门诊就诊。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | admission_no | varchar | 住院号。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | admission_diagnosis | text | 入院诊断信息。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | discharge_diagnosis | text | 出院诊断信息。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | surgery_record | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | blood_transfusion_record | text | 输血记录摘要。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | allergy_history | text | 患者过敏史。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| inpatient_record_06 | nursing_notes | text | 护理记录内容。业务域：住院病历。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | order_id | varchar | 医嘱编号。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | drug_name | varchar | 药品名称。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | dosage_backup | varchar | 用药剂量。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | frequency | varchar | 用药频次。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | prescription_text | text | 处方明细文本。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| medical_order_06 | pharmacist_review | text | 药师审核意见。业务域：医嘱处方。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | lab_item_name | varchar | 检验项目名称。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | lab_result_value | varchar | 检验结果值。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | reference_range | varchar | 参考范围。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | abnormal_flag | varchar | 异常标识。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | sample_type | varchar | 样本类型。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| lab_result_06 | report_time | datetime | 检验报告时间。业务域：检验检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | exam_part | varchar | 检查部位。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | imaging_finding_backup | text |  |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | imaging_diagnosis | text | 影像诊断结论。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | dicom_uid | varchar | 影像文件唯一标识。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| imaging_exam_06 | exam_device | varchar | 检查设备名称。业务域：影像检查。测试批次：06 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| insurance_settlement_07 | settlement_id | varchar | 医保结算编号。业务域：医保结算。测试批次：07 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| unknown_table | notes | text | 自由文本备注，可能包含患者隐私、联系方式或其他未结构化敏感内容 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| unknown_table | remark | text | 备注 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| unknown_table | name | varchar | 名称字段，无法确认是患者姓名、医生姓名还是机构名称 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| unknown_table | code | varchar | 代码字段，业务含义不明确 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| unknown_table | created_at | datetime | 记录创建时间 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| unknown_table | updated_at | datetime | 记录更新时间 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| unknown_table | extra_json | json | 扩展 JSON 内容，可能混合存储业务字段 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| unknown_table | location | varchar | 位置字段，可能是城市、地址或设备定位 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |

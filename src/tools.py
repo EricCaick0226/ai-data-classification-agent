@@ -1,4 +1,4 @@
-from classifier import classify_column
+from classifier import classify_column, classify_columns
 from csv_analyzer import read_column_metadata
 from report_generator import generate_report
 from rules import load_rule_catalog
@@ -29,6 +29,20 @@ def classify_column_tool(column_info, rule_catalog):
 
     return {
         "tool_name": "classify_column_tool",
+        "status": "success",
+        "result": result,
+    }
+
+
+def classify_columns_tool(column_infos, rule_catalog, batch_size=10):
+    result = classify_columns(
+        column_infos=column_infos,
+        rule_catalog=rule_catalog,
+        batch_size=batch_size,
+    )
+
+    return {
+        "tool_name": "classify_columns_tool",
         "status": "success",
         "result": result,
     }

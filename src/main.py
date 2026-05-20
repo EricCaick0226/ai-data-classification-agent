@@ -8,6 +8,8 @@ def main():
         input_path=input_path,
         rules_path=rules_path,
         output_path=output_path,
+        batch_threshold=args.batch_threshold,
+        batch_size=args.batch_size,
     )
 
 
