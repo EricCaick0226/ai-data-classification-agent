@@ -72,6 +72,7 @@ def _build_messages(column_info, candidate_rules, level_rules):
             "classification_path": rule["classification_path"],
             "recommended_level": rule["recommended_level"],
             "classification_description": rule["classification_description"],
+            "match_profile": rule.get("llm_match_profile", {}),
         }
         for rule in candidate_rules
     ]
@@ -83,6 +84,11 @@ def _build_messages(column_info, candidate_rules, level_rules):
         "分类分级标准 Excel 是唯一权威来源。"
         "你只能从候选 classification_path 中选择最匹配的一条，不能创造新的分类路径或等级。"
         "请根据 table_name、column_name、column_type、column_description 判断 column 语义。"
+        "候选规则中的 match_profile 是上一阶段 LLM 基于当前字段生成的匹配辅助信息，"
+        "只用于理解字段与候选分类的语义关系，不能替代规则 Excel。"
+        "选择分类时必须同时匹配字段语义和分类路径上下文，"
+        "不能只因为某个关键词命中就选择更具体的业务场景路径。"
+        "如果字段元数据没有体现候选路径中的具体场景，应选择语义更稳妥的上位或通用候选。"
         "只返回一个 JSON 对象，不要输出 Markdown 或解释性前后缀。"
     )
 

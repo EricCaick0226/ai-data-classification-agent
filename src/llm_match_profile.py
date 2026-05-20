@@ -224,6 +224,13 @@ def _merge_profile_into_rules(rules, payload):
         if not profile:
             continue
 
+        rule["llm_match_profile"] = {
+            "core_terms": profile.get("core_terms", []),
+            "synonyms": profile.get("synonyms", []),
+            "column_name_hints": profile.get("column_name_hints", []),
+            "negative_terms": profile.get("negative_terms", []),
+        }
+
         before_count = len(rule.get("match_terms", []))
         for term in profile.get("core_terms", []):
             _merge_match_term(rule, term, 5)
