@@ -1,186 +1,235 @@
-# src/rules.py
+from dataclasses import dataclass
+import math
+import re
 
-FIELD_RULES = [
-    {
-        "keywords": ["password", "passwd", "pwd"],
-        "category": "Sensitive / 身份认证数据",
-        "risk_level": "Critical",
-        "reason": "字段名可能表示密码或登录凭证，泄露后可能导致账号被盗。",
-        "recommendation": "必须严格保护，不能明文存储或公开展示。",
-        "needs_review": False,
-    },
-    {
-        "keywords": ["id_card", "passport", "ssn"],
-        "category": "Sensitive / 身份识别数据",
-        "risk_level": "Critical",
-        "reason": "字段名可能表示身份证、护照或社会安全号码等强身份识别信息。",
-        "recommendation": "应加密存储，限制访问，并避免在报告或导出文件中直接显示。",
-        "needs_review": False,
-    },
-    {
-        "keywords": ["email", "mail"],
-        "category": "PII / 联系方式数据",
-        "risk_level": "Medium",
-        "reason": "字段名可能表示邮箱地址，可以识别或联系到个人。",
-        "recommendation": "应避免公开展示，导出或共享时需要注意保护。",
-        "needs_review": False,
-    },
-    {
-        "keywords": ["phone", "mobile", "tel"],
-        "category": "PII / 联系方式数据",
-        "risk_level": "Medium",
-        "reason": "字段名可能表示电话号码或手机号码，可以联系到个人。",
-        "recommendation": "应避免公开展示，必要时进行脱敏处理。",
-        "needs_review": False,
-    },
-    {
-        "keywords": ["username"],
-        "category": "PII / 用户标识数据",
-        "risk_level": "Medium",
-        "reason": "字段名 username 可能表示用户账号名，能够间接识别用户。",
-        "recommendation": "应根据业务场景判断是否需要脱敏或限制展示。",
-        "needs_review": True,
-    },
-    {
-        "keywords": ["user_id"],
-        "category": "PII / 用户标识数据",
-        "risk_level": "Medium",
-        "reason": "字段名 user_id 可能是用户唯一编号，可能与个人身份或行为记录关联。",
-        "recommendation": "应结合样例值和业务含义判断是否属于敏感标识符。",
-        "needs_review": True,
-    },
-    {
-        "keywords": ["name"],
-        "category": "PII / 个人信息",
-        "risk_level": "Medium",
-        "reason": "字段名包含 name，可能表示个人姓名，也可能表示商品名、项目名等非个人信息。",
-        "recommendation": "应结合样例值判断是否为真实个人姓名，必要时进行脱敏。",
-        "needs_review": True,
-    },
-    {
-        "keywords": ["address", "location"],
-        "category": "Location / 位置或地址数据",
-        "risk_level": "High",
-        "reason": "字段名可能表示地址、位置或地理信息，具体风险取决于精确程度。",
-        "recommendation": "需要查看样例值判断是城市、地址、GPS 坐标还是实时位置。",
-        "needs_review": True,
-    },
-    {
-        "keywords": ["birth_date", "birthday", "date_of_birth", "dob"],
-        "category": "PII / 出生日期",
-        "risk_level": "High",
-        "reason": "字段名可能表示出生日期，可用于身份识别或身份验证。",
-        "recommendation": "应谨慎处理，必要时只保留年份或年龄段。",
-        "needs_review": True,
-    },
-    {
-        "keywords": ["salary", "income", "wage"],
-        "category": "Confidential / 财务或薪酬数据",
-        "risk_level": "High",
-        "reason": "字段名可能表示薪资、收入或工资，属于敏感财务信息。",
-        "recommendation": "应限制访问，避免在公开报告中展示个人级别薪酬数据。",
-        "needs_review": False,
-    },
-    {
-        "keywords": ["login_time", "last_login"],
-        "category": "Behavioral / 行为数据",
-        "risk_level": "Medium",
-        "reason": "字段名可能表示用户登录时间，属于行为或活动记录。",
-        "recommendation": "应结合具体使用场景判断是否涉及用户行为追踪。",
-        "needs_review": True,
-    },
-    {
-        "keywords": ["device_id", "device"],
-        "category": "Device / 设备数据",
-        "risk_level": "Medium",
-        "reason": "字段名可能表示设备编号或设备信息，可能与用户行为或身份关联。",
-        "recommendation": "应检查是否为唯一设备标识符，必要时进行脱敏。",
-        "needs_review": True,
-    },
-    {
-        "keywords": ["created_at", "updated_at"],
-        "category": "Internal / 系统时间字段",
-        "risk_level": "Low",
-        "reason": "字段名表示创建或更新时间，通常是系统内部时间记录。",
-        "recommendation": "一般可以保留，但仍需注意是否与敏感事件关联。",
-        "needs_review": False,
-    },
-    {
-        "keywords": ["favorite_color", "preference"],
-        "category": "Public / 普通偏好数据",
-        "risk_level": "Low",
-        "reason": "字段名可能表示普通偏好信息，通常敏感性较低。",
-        "recommendation": "一般风险较低，但仍需结合具体内容判断。",
-        "needs_review": False,
-    },
-    {
-        "keywords": ["notes", "note", "comment"],
-        "category": "Unknown / 自由文本字段",
-        "risk_level": "Unknown",
-        "reason": "字段名表示自由文本内容，无法仅凭字段名判断是否包含敏感信息。",
-        "recommendation": "必须查看样例值或进行人工复核。",
-        "needs_review": True,
-    },
+import pandas as pd
+
+
+CLASSIFICATION_COLUMNS = [
+    "一级分类",
+    "二级分类",
+    "三级分类",
+    "四级分类",
+    "五级分类",
+    "推荐分级",
+    "分类说明",
 ]
 
+LEVEL_COLUMNS = [
+    "安全等级",
+    "等级名称",
+    "共享属性",
+    "开放属性",
+]
 
-def classify_field(field_name):
-    normalized_name = field_name.lower()
-
-    for rule in FIELD_RULES:
-        for keyword in rule["keywords"]:
-            if keyword in normalized_name:
-                return {
-                    "field_name": field_name,
-                    "category": rule["category"],
-                    "risk_level": rule["risk_level"],
-                    "reason": rule["reason"],
-                    "recommendation": rule["recommendation"],
-                    "needs_review": rule["needs_review"],
-                }
-
-    return {
-        "field_name": field_name,
-        "category": "Unknown / 未知字段",
-        "risk_level": "Unknown",
-        "reason": "没有匹配到已知关键词，无法仅凭字段名判断数据类型。",
-        "recommendation": "需要查看样例值或进行人工复核。",
-        "needs_review": True,
-    }
+CLASSIFICATION_SHEET_NAME = "分类"
+LEVEL_SHEET_NAME = "分级"
 
 
-if __name__ == "__main__":
-    test_fields = [
-        "email",
-        "phone_number",
-        "password",
-        "id_card",
-        "ssn",
-        "name",
-        "username",
-        "user_id",
-        "address",
-        "birth_date",
-        "created_at",
-        "updated_at",
-        "notes",
-        "comment",
-        "salary",
-        "favorite_color",
-        "last_login_time",
-        "device_id",
-        "user_location",
-        "random_note",
-        "random_field",
+@dataclass
+class RuleCatalog:
+    classification_rules: list[dict]
+    level_rules: dict[str, dict]
+
+    def get_rule_by_path(self, classification_path):
+        for rule in self.classification_rules:
+            if rule["classification_path"] == classification_path:
+                return rule
+        return None
+
+    def get_level_rule(self, security_level):
+        return self.level_rules.get(str(security_level).strip())
+
+    def get_candidate_rules(self, column_info, limit=12):
+        scored_rules = []
+        source_text = _build_column_search_text(column_info)
+
+        for rule in self.classification_rules:
+            score = _score_rule(source_text, rule)
+            scored_rules.append((score, rule))
+
+        scored_rules.sort(
+            key=lambda item: (
+                item[0],
+                len(item[1]["classification_description"]),
+                item[1]["classification_path"],
+            ),
+            reverse=True,
+        )
+
+        candidates = [rule for score, rule in scored_rules if score > 0][:limit]
+        if candidates:
+            return candidates
+
+        return [rule for _, rule in scored_rules[:limit]]
+
+
+def load_rule_catalog(excel_path):
+    classification_df = _read_template_sheet(
+        excel_path,
+        preferred_sheet_name=CLASSIFICATION_SHEET_NAME,
+        required_columns=CLASSIFICATION_COLUMNS,
+    )
+    level_df = _read_template_sheet(
+        excel_path,
+        preferred_sheet_name=LEVEL_SHEET_NAME,
+        required_columns=LEVEL_COLUMNS,
+    )
+
+    classification_rules = _build_classification_rules(classification_df)
+    level_rules = _build_level_rules(level_df)
+
+    if not classification_rules:
+        raise ValueError("No classification rules found in the rule Excel file.")
+
+    if not level_rules:
+        raise ValueError("No level rules found in the rule Excel file.")
+
+    return RuleCatalog(
+        classification_rules=classification_rules,
+        level_rules=level_rules,
+    )
+
+
+def _read_template_sheet(excel_path, preferred_sheet_name, required_columns):
+    xls = pd.ExcelFile(excel_path)
+    sheet_names = list(xls.sheet_names)
+
+    candidate_sheets = []
+    if preferred_sheet_name in sheet_names:
+        candidate_sheets.append(preferred_sheet_name)
+    candidate_sheets.extend(name for name in sheet_names if name not in candidate_sheets)
+
+    for sheet_name in candidate_sheets:
+        raw_df = pd.read_excel(excel_path, sheet_name=sheet_name, header=None)
+        header_index = _find_header_index(raw_df, required_columns)
+        if header_index is None:
+            continue
+
+        headers = [_normalize_cell(value) for value in raw_df.iloc[header_index].tolist()]
+        df = raw_df.iloc[header_index + 1 :].copy()
+        df.columns = headers
+        df = df.loc[:, [column for column in df.columns if column]]
+        missing_columns = [
+            column for column in required_columns
+            if column not in df.columns
+        ]
+        if missing_columns:
+            continue
+
+        return df[required_columns].copy()
+
+    raise ValueError(
+        "Could not find a sheet with required columns: "
+        + ", ".join(required_columns)
+    )
+
+
+def _find_header_index(raw_df, required_columns):
+    required_set = set(required_columns)
+
+    for index, row in raw_df.iterrows():
+        values = {_normalize_cell(value) for value in row.tolist()}
+        if required_set.issubset(values):
+            return index
+
+    return None
+
+
+def _build_classification_rules(df):
+    rules = []
+
+    for _, row in df.iterrows():
+        parts = [
+            _normalize_cell(row.get(column))
+            for column in CLASSIFICATION_COLUMNS[:5]
+        ]
+        classification_parts = [part for part in parts if part]
+        if not classification_parts:
+            continue
+
+        recommended_level = _normalize_cell(row.get("推荐分级"))
+        description = _normalize_cell(row.get("分类说明"))
+
+        rules.append(
+            {
+                "classification_path": " / ".join(classification_parts),
+                "classification_parts": classification_parts,
+                "recommended_level": recommended_level,
+                "classification_description": description,
+            }
+        )
+
+    return rules
+
+
+def _build_level_rules(df):
+    level_rules = {}
+
+    for _, row in df.iterrows():
+        security_level = _normalize_cell(row.get("安全等级"))
+        if not security_level:
+            continue
+
+        level_rules[security_level] = {
+            "security_level": security_level,
+            "level_name": _normalize_cell(row.get("等级名称")),
+            "sharing_policy": _normalize_cell(row.get("共享属性")),
+            "open_policy": _normalize_cell(row.get("开放属性")),
+        }
+
+    return level_rules
+
+
+def _score_rule(source_text, rule):
+    score = 0
+    searchable_values = [
+        rule["classification_path"],
+        rule["classification_description"],
+        *rule["classification_parts"],
     ]
 
-    for field in test_fields:
-        result = classify_field(field)
+    for value in searchable_values:
+        normalized_value = _normalize_for_match(value)
+        if not normalized_value:
+            continue
 
-        print("字段名:", result["field_name"])
-        print("分类:", result["category"])
-        print("等级:", result["risk_level"])
-        print("原因:", result["reason"])
-        print("建议:", result["recommendation"])
-        print("是否需要人工复核:", result["needs_review"])
-        print("-" * 50)
+        if normalized_value in source_text:
+            score += 5
+
+        for token in _tokenize(normalized_value):
+            if token and token in source_text:
+                score += 1
+
+    return score
+
+
+def _build_column_search_text(column_info):
+    values = [
+        column_info.get("table_name", ""),
+        column_info.get("column_name", ""),
+        column_info.get("column_type", ""),
+        column_info.get("column_description", ""),
+    ]
+    return _normalize_for_match(" ".join(str(value) for value in values))
+
+
+def _tokenize(value):
+    ascii_tokens = re.findall(r"[a-zA-Z0-9]+", value)
+    chinese_tokens = re.findall(r"[\u4e00-\u9fff]{2,}", value)
+    return ascii_tokens + chinese_tokens
+
+
+def _normalize_for_match(value):
+    value = _normalize_cell(value).lower()
+    return re.sub(r"\s+", "", value)
+
+
+def _normalize_cell(value):
+    if value is None:
+        return ""
+
+    if isinstance(value, float) and math.isnan(value):
+        return ""
+
+    return str(value).strip()

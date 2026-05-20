@@ -1,206 +1,196 @@
-import re
+import argparse
+import json
+
 from agent_executor import execute_tool
 
-def get_user_task():
-    user_task = input("请输入你的任务：")
-    return user_task
 
-
-def detect_task_type(user_task):
-    keywords = ["CSV", "csv", "分析", "分类", "分级"]
-
-    for keyword in keywords:
-        if keyword in user_task:
-            return "csv_data_classification"
-
-    return "unknown"
-
-
-def extract_csv_path(user_task):
-    match = re.search(r"[\w./-]+\.csv", user_task)
-
-    if match:
-        return match.group(0)
-
-    return "data/sample_users.csv"
-
-def create_plan(csv_path):
-    plan = [
+def create_plan(input_path, rules_path, output_path):
+    return [
         {
             "step": 1,
-            "tool_name": "analyze_csv",
-            "purpose": "Extract column metadata from CSV",
-            "args": {
-                "file_path": csv_path
-            }
+            "tool_name": "read_column_metadata",
+            "purpose": "Read database column metadata from CSV or Excel.",
+            "args": {"file_path": input_path},
         },
         {
             "step": 2,
-            "tool_name": "classify_column",
-            "purpose": "Classify each column and assign risk level",
-            "args": "for each column_info from analyze_csv result"
+            "tool_name": "load_rule_catalog",
+            "purpose": "Load classification and level rules from rule Excel.",
+            "args": {"excel_path": rules_path},
         },
         {
             "step": 3,
+            "tool_name": "classify_column",
+            "purpose": "Use LLM semantic matching against rule candidates for each column.",
+            "args": "for each column_info from read_column_metadata result",
+        },
+        {
+            "step": 4,
             "tool_name": "generate_report",
-            "purpose": "Generate Markdown classification report",
-            "args": {
-                "output_path": "reports/classification_report.md"
-            }
-        }
+            "purpose": "Generate standardized Markdown classification report.",
+            "args": {"output_path": output_path},
+        },
     ]
 
-    return plan
 
 def build_summary(classification_results, report_path):
-    total_fields = len(classification_results)
-
-    fields_needing_review = sum(
+    total_columns = len(classification_results)
+    review_required_columns = sum(
         1 for result in classification_results
-        if result.get("needs_review") == True
+        if result.get("review_required") is True
+    )
+    classified_columns = sum(
+        1 for result in classification_results
+        if result.get("classification_path")
     )
 
-    high_or_critical_risk_fields = sum(
-        1 for result in classification_results
-        if result.get("risk_level") in ["High", "Critical"]
-    )
-
-    summary = {
-        "total_fields": total_fields,
-        "fields_needing_review": fields_needing_review,
-        "high_or_critical_risk_fields": high_or_critical_risk_fields,
-        "report_path": report_path
+    return {
+        "total_columns": total_columns,
+        "classified_columns": classified_columns,
+        "review_required_columns": review_required_columns,
+        "report_path": report_path,
     }
 
-    return summary
 
-
-def run_agent(user_task):
-    agent_name = "DataClassificationAgent"
+def run_agent(input_path, rules_path, output_path):
+    agent_name = "ColumnClassificationAgent"
 
     print(f"\nAgent: {agent_name}")
-    print("[Agent] Agent is reading the user task...")
+    print("[Agent] Building a single-task column classification plan...")
 
-    task_type = detect_task_type(user_task)
-    print(f"[Agent] 判断任务类型：{task_type}")
-
-    if task_type != "csv_data_classification":
-        return {
-            "agent_name": agent_name,
-            "task_type": task_type,
-            "status": "error",
-            "message": "This agent can only handle CSV data classification tasks for now."
-        }
-
-    csv_path = extract_csv_path(user_task)
-    print(f"[Agent] 识别 CSV 路径：{csv_path}")
-
-    plan = create_plan(csv_path)
-
-    print("\n[Agent] 生成工具调用计划：")
+    plan = create_plan(input_path, rules_path, output_path)
     for step in plan:
-        print(f"[Agent] {step['step']}. {step['tool_name']}：{step['purpose']}")
+        print(f"[Agent] {step['step']}. {step['tool_name']}: {step['purpose']}")
 
-    print("\n[Agent] 开始执行工具调用计划...")
+    print("\n[Executor] Calling tool: read_column_metadata")
+    metadata_result = execute_tool("read_column_metadata", file_path=input_path)
+    if metadata_result["status"] != "success":
+        return _error_result(agent_name, "Failed to read column metadata.", metadata_result)
 
-    print("\n[Executor] Calling tool: analyze_csv")
+    column_infos = metadata_result["result"]
+    print(f"[Executor] Loaded {len(column_infos)} columns.")
 
-    analyze_result = execute_tool(
-        "analyze_csv",
-        file_path=csv_path
+    print("\n[Executor] Calling tool: load_rule_catalog")
+    rules_result = execute_tool("load_rule_catalog", excel_path=rules_path)
+    if rules_result["status"] != "success":
+        return _error_result(agent_name, "Failed to load rule Excel.", rules_result)
+
+    rule_catalog = rules_result["result"]
+    print(
+        "[Executor] Loaded "
+        f"{len(rule_catalog.classification_rules)} classification rules and "
+        f"{len(rule_catalog.level_rules)} level rules."
     )
 
-    if analyze_result["status"] == "success":
-        print("[Executor] Tool analyze_csv finished successfully.")
-    else:
-        print("[Executor] Tool analyze_csv failed.")
-        return {
-            "agent_name": agent_name,
-            "task_type": task_type,
-            "status": "error",
-            "message": "Failed to analyze CSV.",
-            "details": analyze_result
-        }
-
-    column_infos = analyze_result["result"]
-
-    print("\n[Executor] Calling tool: classify_column for each field")
-
+    print("\n[Executor] Calling tool: classify_column for each column")
     classification_results = []
-
     for column_info in column_infos:
         classify_result = execute_tool(
             "classify_column",
-            column_info=column_info
+            column_info=column_info,
+            rule_catalog=rule_catalog,
         )
 
         if classify_result["status"] == "success":
             classification_results.append(classify_result["result"])
         else:
-            classification_results.append({
-                "field_name": column_info.get("field_name", "unknown"),
-                "status": "error",
-                "message": classify_result.get("message", "Classification failed.")
-            })
+            classification_results.append(
+                {
+                    "table_name": column_info.get("table_name", ""),
+                    "column_name": column_info.get("column_name", ""),
+                    "column_type": column_info.get("column_type", ""),
+                    "column_description": column_info.get("column_description", ""),
+                    "classification_path": "",
+                    "security_level": "",
+                    "level_name": "",
+                    "sharing_policy": "",
+                    "open_policy": "",
+                    "basis": "分类工具调用失败，需要人工复核。",
+                    "confidence": 0,
+                    "review_required": True,
+                    "failure_reason": classify_result.get("message", "Classification failed."),
+                    "candidate_paths": [],
+                }
+            )
 
-    print(f"[Executor] Classified {len(classification_results)} fields successfully.")
+    print(f"[Executor] Processed {len(classification_results)} columns.")
 
     print("\n[Executor] Calling tool: generate_report")
-
     report_result = execute_tool(
         "generate_report",
         results=classification_results,
-        output_path="reports/classification_report.md"
+        output_path=output_path,
     )
+    if report_result["status"] != "success":
+        return _error_result(agent_name, "Failed to generate report.", report_result)
 
-    if report_result["status"] == "success":
-        print("[Executor] Report generated: reports/classification_report.md")
-    else:
-        print("[Executor] Tool generate_report failed.")
-        return {
-            "agent_name": agent_name,
-            "task_type": task_type,
-            "status": "error",
-            "message": "Failed to generate report.",
-            "details": report_result
-        }
-
-    report_path = "reports/classification_report.md"
+    report_path = report_result["result"]
     summary = build_summary(classification_results, report_path)
 
-    print("\n[Agent] 任务完成。")
-    print(f"总字段数：{summary['total_fields']}")
-    print(f"需要人工复核字段数：{summary['fields_needing_review']}")
-    print(f"High / Critical 风险字段数：{summary['high_or_critical_risk_fields']}")
-    print(f"报告路径：{summary['report_path']}")
+    print("\n[Agent] Task completed.")
+    print(f"Total columns: {summary['total_columns']}")
+    print(f"Classified columns: {summary['classified_columns']}")
+    print(f"Review required columns: {summary['review_required_columns']}")
+    print(f"Report path: {summary['report_path']}")
 
-    final_result = {
+    return {
         "agent_name": agent_name,
-        "task_type": task_type,
         "status": "success",
         "input": {
-            "user_task": user_task,
-            "csv_path": csv_path
+            "column_metadata_path": input_path,
+            "rule_excel_path": rules_path,
         },
         "plan": plan,
         "tools_used": [
-            "analyze_csv",
+            "read_column_metadata",
+            "load_rule_catalog",
             "classify_column",
-            "generate_report"
+            "generate_report",
         ],
         "summary": summary,
         "results": classification_results,
-        "message": "CSV data classification completed successfully."
+        "message": "Column classification completed.",
     }
 
-    return final_result
+
+def _error_result(agent_name, message, details):
+    return {
+        "agent_name": agent_name,
+        "status": "error",
+        "message": message,
+        "details": details,
+    }
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Run the Excel-rule-driven column classification agent."
+    )
+    parser.add_argument(
+        "--input",
+        required=True,
+        help="CSV or Excel file containing database column metadata.",
+    )
+    parser.add_argument(
+        "--rules",
+        required=True,
+        help="Excel file containing classification and level rules.",
+    )
+    parser.add_argument(
+        "--output",
+        default="reports/classification_report.md",
+        help="Markdown report output path.",
+    )
+    return parser.parse_args()
+
 
 if __name__ == "__main__":
-    import json
-
-    user_task = get_user_task()
-    print(f"[Agent] 收到任务：{user_task}")
-    final_result = run_agent(user_task)
+    args = parse_args()
+    final_result = run_agent(
+        input_path=args.input,
+        rules_path=args.rules,
+        output_path=args.output,
+    )
 
     print("\nFinal Agent Result:")
-    print(json.dumps(final_result, indent=2, ensure_ascii=False))
+    print(json.dumps(final_result, indent=2, ensure_ascii=False, default=str))

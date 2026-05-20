@@ -1,0 +1,7 @@
+table_name,column_name,column_type,column_description
+patient,patient_name,varchar,患者姓名用于医疗服务中的身份确认
+patient,id_card_no,varchar,患者身份证件号码
+patient,diagnosis_result,text,患者诊断结果
+patient,treatment_plan,text,患者治疗方案
+medical_settlement,insurance_amount,decimal,医保结算金额
+medical_settlement,created_at,datetime,记录创建时间

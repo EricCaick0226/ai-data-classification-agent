@@ -1,82 +1,155 @@
-from rules import classify_field
-
-def calculate_confidence(classification_result):
-    risk_level = classification_result.get("risk_level", "Unknown")
-    needs_review = classification_result.get("needs_review", True)
-
-    base_confidence = {
-        "Critical": 0.95,
-        "High": 0.85,
-        "Medium": 0.75,
-        "Low": 0.65,
-        "Unknown": 0.35
-    }.get(risk_level, 0.35)
-
-    if needs_review and base_confidence > 0.45:
-        base_confidence -= 0.15
-
-    return round(base_confidence, 2)
+from llm_classifier import classify_column_with_llm
 
 
-def classify_column(column_info):
-    """
-    Classify one column based on column information.
-    """
+CONFIDENCE_THRESHOLD = 0.7
 
-    field_name = column_info["field_name"]
-    data_type = column_info["data_type"]
-    missing_count = column_info["missing_count"]
-    sample_values = column_info["sample_values"]
 
-    rule_result = classify_field(field_name)
+def classify_column(column_info, rule_catalog, confidence_threshold=CONFIDENCE_THRESHOLD):
+    candidate_rules = rule_catalog.get_candidate_rules(column_info)
+    llm_result = classify_column_with_llm(
+        column_info=column_info,
+        candidate_rules=candidate_rules,
+        level_rules=rule_catalog.level_rules,
+    )
 
-    result = {
-        "field_name": field_name,
-        "data_type": data_type,
-        "missing_count": missing_count,
-        "sample_values": sample_values,
-        "category": rule_result["category"],
-        "risk_level": rule_result["risk_level"],
-        "reason": rule_result["reason"],
-        "recommendation": rule_result["recommendation"],
-        "confidence": calculate_confidence(rule_result),
-        "needs_review": rule_result["needs_review"],
+    validation = _validate_llm_result(llm_result, rule_catalog, confidence_threshold)
+    if validation["is_valid"]:
+        return _build_valid_result(
+            column_info=column_info,
+            llm_result=llm_result,
+            matched_rule=validation["matched_rule"],
+            level_rule=validation["level_rule"],
+            candidate_rules=candidate_rules,
+        )
+
+    return _build_review_result(
+        column_info=column_info,
+        candidate_rules=candidate_rules,
+        failure_reason=validation["failure_reason"],
+        llm_result=llm_result,
+    )
+
+
+def _validate_llm_result(llm_result, rule_catalog, confidence_threshold):
+    if llm_result.get("status") != "success":
+        return {
+            "is_valid": False,
+            "failure_reason": llm_result.get("error", "LLM classification failed."),
+        }
+
+    classification_path = str(llm_result.get("classification_path", "")).strip()
+    security_level = str(llm_result.get("security_level", "")).strip()
+    confidence = _to_float(llm_result.get("confidence"))
+
+    if not classification_path:
+        return {
+            "is_valid": False,
+            "failure_reason": "LLM result is missing classification_path.",
+        }
+
+    matched_rule = rule_catalog.get_rule_by_path(classification_path)
+    if matched_rule is None:
+        return {
+            "is_valid": False,
+            "failure_reason": "LLM returned a classification_path outside the rule Excel.",
+        }
+
+    recommended_level = matched_rule.get("recommended_level", "")
+    if recommended_level and security_level and security_level != recommended_level:
+        return {
+            "is_valid": False,
+            "failure_reason": "LLM security_level does not match the rule Excel recommended level.",
+        }
+
+    if recommended_level:
+        security_level = recommended_level
+        llm_result["security_level"] = security_level
+    elif not security_level:
+        return {
+            "is_valid": False,
+            "failure_reason": "Matched rule has no recommended level and LLM did not return security_level.",
+        }
+
+    level_rule = rule_catalog.get_level_rule(security_level)
+    if level_rule is None:
+        return {
+            "is_valid": False,
+            "failure_reason": "LLM returned a security_level outside the level rules.",
+        }
+
+    if confidence is None:
+        return {
+            "is_valid": False,
+            "failure_reason": "LLM result is missing a numeric confidence value.",
+        }
+
+    if confidence < confidence_threshold:
+        return {
+            "is_valid": False,
+            "failure_reason": "LLM confidence is below threshold.",
+        }
+
+    return {
+        "is_valid": True,
+        "matched_rule": matched_rule,
+        "level_rule": level_rule,
     }
 
-    return result
-if __name__ == "__main__":
-    test_columns = [
-        {
-            "field_name": "email",
-            "data_type": "object",
-            "missing_count": 0,
-            "sample_values": ["a@gmail.com", "b@nyu.edu"],
-        },
-        {
-            "field_name": "user_location",
-            "data_type": "object",
-            "missing_count": 2,
-            "sample_values": ["New York", "Los Angeles"],
-        },
-        {
-            "field_name": "notes",
-            "data_type": "object",
-            "missing_count": 5,
-            "sample_values": ["student asked for help", "personal comment"],
-        },
+
+def _build_valid_result(column_info, llm_result, matched_rule, level_rule, candidate_rules):
+    confidence = round(_to_float(llm_result.get("confidence")) or 0, 2)
+    review_required = bool(llm_result.get("review_required", False))
+
+    return {
+        **_column_result_base(column_info),
+        "classification_path": matched_rule["classification_path"],
+        "security_level": level_rule["security_level"],
+        "level_name": level_rule["level_name"],
+        "sharing_policy": level_rule["sharing_policy"],
+        "open_policy": level_rule["open_policy"],
+        "basis": str(llm_result.get("basis", "")).strip(),
+        "confidence": confidence,
+        "review_required": review_required,
+        "failure_reason": "",
+        "candidate_paths": _candidate_paths(candidate_rules),
+    }
+
+
+def _build_review_result(column_info, candidate_rules, failure_reason, llm_result):
+    return {
+        **_column_result_base(column_info),
+        "classification_path": "",
+        "security_level": "",
+        "level_name": "",
+        "sharing_policy": "",
+        "open_policy": "",
+        "basis": "未形成可信分类结论，需要人工复核。",
+        "confidence": 0,
+        "review_required": True,
+        "failure_reason": failure_reason,
+        "candidate_paths": _candidate_paths(candidate_rules),
+        "llm_raw_response": llm_result.get("raw_response", ""),
+    }
+
+
+def _column_result_base(column_info):
+    return {
+        "table_name": column_info.get("table_name", ""),
+        "column_name": column_info.get("column_name", ""),
+        "column_type": column_info.get("column_type", ""),
+        "column_description": column_info.get("column_description", ""),
+    }
+
+
+def _candidate_paths(candidate_rules):
+    return [
+        rule["classification_path"]
+        for rule in candidate_rules[:5]
     ]
 
-    for column in test_columns:
-        result = classify_column(column)
 
-        print("字段名:", result["field_name"])
-        print("数据类型:", result["data_type"])
-        print("缺失值数量:", result["missing_count"])
-        print("样例值:", result["sample_values"])
-        print("分类:", result["category"])
-        print("等级:", result["risk_level"])
-        print("原因:", result["reason"])
-        print("建议:", result["recommendation"])
-        print("置信度:", result["confidence"])
-        print("是否需要人工复核:", result["needs_review"])
-        print("-" * 50)
+def _to_float(value):
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None

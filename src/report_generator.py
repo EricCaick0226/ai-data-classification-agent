@@ -1,91 +1,118 @@
+from pathlib import Path
+
+
 def generate_report(results, output_path="reports/classification_report.md"):
-    total_fields = len(results)
+    output = Path(output_path)
+    output.parent.mkdir(parents=True, exist_ok=True)
 
-    needs_review_count = sum(
-        1 for item in results
-        if item.get("needs_review") is True
-    )
-
-    high_risk_count = sum(
-        1 for item in results
-        if item.get("risk_level") in ["High", "Critical"]
-    )
+    total_columns = len(results)
+    review_count = sum(1 for item in results if item.get("review_required") is True)
+    classified_count = sum(1 for item in results if item.get("classification_path"))
+    security_level_counts = _count_by(results, "security_level")
 
     markdown_lines = []
+    markdown_lines.append("# Column 分类分级报告")
+    markdown_lines.append("")
+    markdown_lines.append("## 汇总")
+    markdown_lines.append("")
+    markdown_lines.append(f"- Total columns: {total_columns}")
+    markdown_lines.append(f"- Classified columns: {classified_count}")
+    markdown_lines.append(f"- Review required columns: {review_count}")
+    markdown_lines.append("")
 
-    markdown_lines.append("# Data Classification Report")
+    if security_level_counts:
+        markdown_lines.append("## 等级统计")
+        markdown_lines.append("")
+        markdown_lines.append("| Security Level | Count |")
+        markdown_lines.append("|---|---:|")
+        for level, count in security_level_counts.items():
+            markdown_lines.append(f"| {_escape(level)} | {count} |")
+        markdown_lines.append("")
+
+    review_items = [
+        item for item in results
+        if item.get("review_required") is True
+    ]
+    if review_items:
+        markdown_lines.append("## 需要人工复核")
+        markdown_lines.append("")
+        markdown_lines.append("| Table | Column | Reason | Candidate Paths |")
+        markdown_lines.append("|---|---|---|---|")
+        for item in review_items:
+            markdown_lines.append(
+                "| {table_name} | {column_name} | {failure_reason} | {candidate_paths} |".format(
+                    table_name=_escape(item.get("table_name")),
+                    column_name=_escape(item.get("column_name")),
+                    failure_reason=_escape(item.get("failure_reason") or item.get("basis")),
+                    candidate_paths=_escape("; ".join(item.get("candidate_paths", []))),
+                )
+            )
+        markdown_lines.append("")
+
+    markdown_lines.append("## Column 分类分级明细")
     markdown_lines.append("")
-    markdown_lines.append("This report summarizes the classification and risk level of each field in the dataset.")
-    markdown_lines.append("")
-    markdown_lines.append("## Summary")
-    markdown_lines.append("")
-    markdown_lines.append(f"- Total fields: {total_fields}")
-    markdown_lines.append(f"- Fields needing manual review: {needs_review_count}")
-    markdown_lines.append(f"- High or Critical risk fields: {high_risk_count}")
-    markdown_lines.append("")
-    markdown_lines.append("## Field Classification Details")
-    markdown_lines.append("")
-    markdown_lines.append("| Field Name | Data Type | Missing Count | Category | Risk Level | Confidence | Reason | Recommendation | Needs Review |")
-    markdown_lines.append("|---|---|---|---|---|---|---|---|---|")
+    markdown_lines.append(
+        "| Table | Column | Type | Description | Classification Path | "
+        "Security Level | Level Name | Sharing Policy | Open Policy | Basis | Confidence | Review Required |"
+    )
+    markdown_lines.append("|---|---|---|---|---|---|---|---|---|---|---:|---|")
 
     for item in results:
         markdown_lines.append(
-            f"| {item.get('field_name')} "
-            f"| {item.get('data_type')} "
-            f"| {item.get('missing_count')} "
-            f"| {item.get('category')} "
-            f"| {item.get('risk_level')} "
-            f"| {item.get('confidence')} "
-            f"| {item.get('reason')} "
-            f"| {item.get('recommendation')} "
-            f"| {item.get('needs_review')} |"
+            "| {table_name} | {column_name} | {column_type} | {column_description} | "
+            "{classification_path} | {security_level} | {level_name} | {sharing_policy} | "
+            "{open_policy} | {basis} | {confidence} | {review_required} |".format(
+                table_name=_escape(item.get("table_name")),
+                column_name=_escape(item.get("column_name")),
+                column_type=_escape(item.get("column_type")),
+                column_description=_escape(item.get("column_description")),
+                classification_path=_escape(item.get("classification_path")),
+                security_level=_escape(item.get("security_level")),
+                level_name=_escape(item.get("level_name")),
+                sharing_policy=_escape(item.get("sharing_policy")),
+                open_policy=_escape(item.get("open_policy")),
+                basis=_escape(item.get("basis")),
+                confidence=item.get("confidence", ""),
+                review_required=item.get("review_required"),
+            )
         )
 
-    markdown_lines.append("")
+    output.write_text("\n".join(markdown_lines) + "\n", encoding="utf-8")
+    return str(output)
 
-    markdown_content = "\n".join(markdown_lines)
 
-    with open(output_path, "w", encoding="utf-8") as file:
-        file.write(markdown_content)
+def _count_by(results, key):
+    counts = {}
+    for item in results:
+        value = item.get(key)
+        if not value:
+            continue
+        counts[value] = counts.get(value, 0) + 1
+    return counts
 
-    return output_path
+
+def _escape(value):
+    if value is None:
+        return ""
+
+    return str(value).replace("\n", " ").replace("|", "\\|")
+
 
 if __name__ == "__main__":
     fake_results = [
         {
-            "field_name": "email",
-            "data_type": "object",
-            "missing_count": 0,
-            "sample_values": ["eric@example.com", "student@nyu.edu"],
-            "category": "PII",
-            "risk_level": "Medium",
-            "reason": "Email can identify or contact a person.",
-            "recommendation": "Protect this field and avoid unnecessary exposure.",
-            "needs_review": False
-        },
-        {
-            "field_name": "notes",
-            "data_type": "object",
-            "missing_count": 1,
-            "sample_values": ["prefers email contact", "needs follow-up"],
-            "category": "Unknown",
-            "risk_level": "Unknown",
-            "reason": "Free-text fields may contain unpredictable information.",
-            "recommendation": "Review this field manually before sharing.",
-            "needs_review": True
-        },
-        {
-            "field_name": "password",
-            "data_type": "object",
-            "missing_count": 0,
-            "sample_values": ["fake_password_1", "fake_password_2"],
-            "category": "Authentication",
-            "risk_level": "Critical",
-            "reason": "Passwords are sensitive authentication data.",
-            "recommendation": "Never expose passwords in plain text.",
-            "needs_review": False
+            "table_name": "patient",
+            "column_name": "patient_name",
+            "column_type": "varchar",
+            "column_description": "患者姓名",
+            "classification_path": "基础资源 / 服务范围与对象 / 患者 / 患者信息",
+            "security_level": "3级",
+            "level_name": "一般数据3级",
+            "sharing_policy": "有条件共享",
+            "open_policy": "有条件开放",
+            "basis": "column_description 与患者信息匹配。",
+            "confidence": 0.86,
+            "review_required": False,
         }
     ]
-
-    report_path = generate_report(fake_results)
-    print(f"Report generated: {report_path}")
+    print(generate_report(fake_results))

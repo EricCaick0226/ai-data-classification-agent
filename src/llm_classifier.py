@@ -1,61 +1,124 @@
-def should_use_llm(classification_result):
-    category = classification_result.get("category")
-    risk_level = classification_result.get("risk_level")
-    needs_review = classification_result.get("needs_review")
-    confidence = classification_result.get("confidence", 1.0)
+import json
+import os
+import re
 
-    if category == "Unknown":
-        return True
 
-    if risk_level == "Unknown":
-        return True
+API_KEY = os.getenv("DASHSCOPE_API_KEY")
+BASE_URL = os.getenv("OPENAI_BASE_URL", "http://mc-llm-api.dev.mchz.com.cn/v1")
+MODEL = os.getenv("MODEL", "qwen-plus")
+TIMEOUT_SECONDS = float(os.getenv("TIMEOUT_SECONDS", "30"))
 
-    if needs_review is True:
-        return True
 
-    if confidence < 0.6:
-        return True
+def classify_column_with_llm(column_info, candidate_rules, level_rules):
+    if not API_KEY:
+        return {
+            "status": "error",
+            "error": "DASHSCOPE_API_KEY is not set.",
+        }
 
-    return False
+    client = _build_client()
+    messages = _build_messages(column_info, candidate_rules, level_rules)
 
-def mock_llm_classify(column_info):
-    field_name = column_info.get("field_name", "unknown_field")
-    sample_values = column_info.get("sample_values", [])
+    try:
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=messages,
+            temperature=0,
+        )
+    except Exception as exc:
+        return {
+            "status": "error",
+            "error": f"LLM request failed: {exc}",
+        }
 
-    return {
-        "source": "mock_llm",
-        "field_name": field_name,
-        "category_suggestion": "Unknown",
-        "risk_level_suggestion": "Unknown",
-        "reason": (
-            f"The field '{field_name}' is ambiguous. "
-            "Based on the field name and sample values, it should be reviewed more carefully."
-        ),
-        "recommendation": (
-            "Use a real LLM API later to inspect sample values and provide a deeper semantic judgment."
-        ),
-        "needs_review": True,
-        "confidence": 0.4,
-        "sample_values_checked": sample_values
+    content = response.choices[0].message.content or ""
+    parsed = _parse_json_object(content)
+    if parsed is None:
+        return {
+            "status": "error",
+            "error": "LLM response is not valid JSON.",
+            "raw_response": content,
+        }
+
+    parsed["status"] = "success"
+    parsed["raw_response"] = content
+    return parsed
+
+
+def _build_client():
+    try:
+        import httpx
+        from openai import OpenAI
+    except ImportError as exc:
+        raise RuntimeError(
+            "OpenAI API dependencies are not installed. "
+            "Run: pip install -r requirements.txt"
+        ) from exc
+
+    base_url = BASE_URL.rstrip("/")
+    if not base_url.endswith("/v1"):
+        base_url = f"{base_url}/v1"
+
+    return OpenAI(
+        api_key=API_KEY,
+        base_url=base_url,
+        http_client=httpx.Client(timeout=httpx.Timeout(TIMEOUT_SECONDS, connect=5)),
+    )
+
+
+def _build_messages(column_info, candidate_rules, level_rules):
+    candidate_payload = [
+        {
+            "classification_path": rule["classification_path"],
+            "recommended_level": rule["recommended_level"],
+            "classification_description": rule["classification_description"],
+        }
+        for rule in candidate_rules
+    ]
+
+    level_payload = list(level_rules.values())
+
+    system_prompt = (
+        "你是一个数据库字段分类分级 Agent。"
+        "分类分级标准 Excel 是唯一权威来源。"
+        "你只能从候选 classification_path 中选择最匹配的一条，不能创造新的分类路径或等级。"
+        "请根据 table_name、column_name、column_type、column_description 判断 column 语义。"
+        "只返回一个 JSON 对象，不要输出 Markdown 或解释性前后缀。"
+    )
+
+    user_prompt = {
+        "column": column_info,
+        "candidate_rules": candidate_payload,
+        "level_rules": level_payload,
+        "required_output_schema": {
+            "classification_path": "必须来自 candidate_rules",
+            "security_level": "优先使用候选规则 recommended_level",
+            "basis": "简短说明匹配依据",
+            "confidence": "0 到 1 的数字",
+            "review_required": "布尔值",
+        },
     }
 
-if __name__ == "__main__":
-    test_result = {
-        "category": "Unknown",
-        "risk_level": "Unknown",
-        "needs_review": True,
-        "confidence": 0.35
-    }
+    return [
+        {"role": "system", "content": system_prompt},
+        {
+            "role": "user",
+            "content": json.dumps(user_prompt, ensure_ascii=False),
+        },
+    ]
 
-    print("Should use LLM?")
-    print(should_use_llm(test_result))
 
-    test_column = {
-        "field_name": "notes",
-        "data_type": "str",
-        "missing_count": 1,
-        "sample_values": ["prefers email contact", "needs follow-up"]
-    }
+def _parse_json_object(content):
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError:
+        pass
 
-    print("\nMock LLM result:")
-    print(mock_llm_classify(test_column))
+    match = re.search(r"\{.*\}", content, flags=re.DOTALL)
+    if not match:
+        return None
+
+    try:
+        return json.loads(match.group(0))
+    except json.JSONDecodeError:
+        return None

@@ -1,206 +1,86 @@
-# AI Data Classification Agent
+# AI Column Classification Agent
 
-A small Agent-style demo for CSV data classification and risk-level analysis.
+This project is a single-task AI Agent for database column classification and sensitivity-level judgment.
 
-This project was built as part of my AI / data internship preparation. The goal is not to build a production-level data governance system, but to understand how an Agent-style workflow can be organized with an Agent, tools, an executor, structured output, and a human-readable report.
+It reads database column metadata, loads a replaceable classification-rule Excel file, uses an OpenAI-compatible LLM API to map each column to an allowed classification path, validates the result against the rule Excel, and generates a standardized Markdown report.
 
-## Project Overview
+## Input Files
 
-AI Data Classification Agent takes a user task, checks whether the task is about CSV data classification, analyzes the CSV file, classifies each column, assigns a risk level, and generates a Markdown report.
+### Column metadata
 
-The current version is mainly rule-based. It does not use LangChain, LangGraph, RAG, vector databases, multi-agent systems, Docker, deployment, or a frontend.
+CSV or Excel file with required columns:
 
-The focus of this project is the basic structure:
+| Column | Meaning |
+|---|---|
+| `table_name` | Database table name |
+| `column_name` | Database column name |
+| `column_type` | Database column type |
+| `column_description` | Business description of the column |
 
-```text
-User task
-→ Agent
-→ Tool-calling plan
-→ Executor
-→ Tools
-→ Structured result
-→ Markdown report
-```
+Chinese aliases are also accepted for convenience: `表名`, `字段名`, `字段类型`, `字段描述`, `列名`, `列类型`, `列描述`.
 
-## Problem It Solves
+### Rule Excel
 
-In real data work, a team may need to quickly understand what kinds of fields exist in a dataset.
+The rule Excel uses a fixed template.
 
-For example, a CSV file may contain:
+Classification sheet required columns:
 
-- personal identifiers
-- contact information
-- authentication data
-- location data
-- device identifiers
-- free-text fields that may need manual review
+| Column |
+|---|
+| `一级分类` |
+| `二级分类` |
+| `三级分类` |
+| `四级分类` |
+| `五级分类` |
+| `推荐分级` |
+| `分类说明` |
 
-This project gives a simple way to inspect a CSV file, classify its columns, assign risk levels, and produce a readable report.
+Level sheet required columns:
 
-## Demo Command
+| Column |
+|---|
+| `安全等级` |
+| `等级名称` |
+| `共享属性` |
+| `开放属性` |
 
-Run the final Agent demo with:
+The rule Excel is the authority. The LLM may only choose from candidate `classification_path` values derived from the Excel rules.
+
+## Configuration
+
+Set these environment variables before calling the API:
 
 ```bash
-python src/agent_demo.py
+export DASHSCOPE_API_KEY="your-api-key"
+export OPENAI_BASE_URL="http://mc-llm-api.dev.mchz.com.cn/v1"
+export MODEL="qwen-plus"
+export TIMEOUT_SECONDS="30"
 ```
 
-Example user input:
+Install dependencies:
 
-```text
-请分析 data/sample_users.csv，并对每个字段做数据分类分级。
+```bash
+pip install -r requirements.txt
 ```
 
-## Expected Output
+## Run
 
-After running the demo, the project should output:
-
-- Agent execution logs
-- a structured JSON-style result
-- a Markdown report at `reports/classification_report.md`
-
-The logs are for showing the execution process.
-
-The JSON-style result is for structured program output and debugging.
-
-The Markdown report is for human readers who want to understand the classification results without reading the code.
-
-## Project Structure
-
-```text
-ai-data-classification-agent/
-├── data/
-│   └── sample_users.csv
-├── notes/
-│   └── 09_final_summary.md
-├── reports/
-│   └── classification_report.md
-├── src/
-│   ├── rules.py
-│   ├── classifier.py
-│   ├── csv_analyzer.py
-│   ├── report_generator.py
-│   ├── tools.py
-│   ├── agent_executor.py
-│   ├── agent_demo.py
-│   ├── main.py
-│   └── llm_classifier.py
-└── README.md
+```bash
+python src/agent_demo.py \
+  --input data/sample_column_metadata.csv \
+  --rules /path/to/分类分级标准.xlsx \
+  --output reports/classification_report.md
 ```
 
-## File Responsibilities
+If `DASHSCOPE_API_KEY` is not set, the Agent still loads rules, builds candidates, and generates a Markdown report, but every column is marked as `review_required=true` because no trusted LLM judgment was produced.
 
-- `src/rules.py`  
-  Stores the rule-based classification logic and risk-level rules.
+## Output
 
-- `src/classifier.py`  
-  Contains the core `classify_column()` logic for classifying one column.
+The Markdown report includes:
 
-- `src/csv_analyzer.py`  
-  Contains `analyze_csv(file_path)`, which reads a CSV file and extracts column information.
-
-- `src/report_generator.py`  
-  Contains `generate_report(results)`, which creates the Markdown classification report.
-
-- `src/tools.py`  
-  Wraps normal Python functions into Agent-callable tools, such as `analyze_csv_tool`, `classify_column_tool`, and `generate_report_tool`.
-
-- `src/agent_executor.py`  
-  Contains `execute_tool()`, which runs tools based on their tool names.
-
-- `src/agent_demo.py`  
-  The final Agent-style demo entry point.
-
-- `src/main.py`  
-  A normal pipeline testing entry point. It is useful for development, but it is not the final demo.
-
-- `src/llm_classifier.py`  
-  Optional LLM or mock LLM interface for future extension.
-
-- `reports/classification_report.md`  
-  The generated human-readable report.
-
-## Agent / Tool / Executor Mapping
-
-In this project, the Agent-style structure is mapped like this:
-
-| Concept | Project Mapping |
-|---|---|
-| Agent | Logic in `src/agent_demo.py` |
-| Executor | `execute_tool()` in `src/agent_executor.py` |
-| Tools | Tool wrappers in `src/tools.py` |
-| Structured Output | Final JSON-style dictionary from `src/agent_demo.py` |
-| Markdown Report | `reports/classification_report.md` |
-
-The Agent receives the user task, detects the task type, extracts the CSV path, creates a tool-calling plan, and summarizes the final result.
-
-The Executor receives a tool name and arguments, then runs the correct tool.
-
-The Tools perform the actual work, such as analyzing the CSV, classifying columns, and generating the report.
-
-## Why This Is an Agent-Style Demo
-
-This project is not only a fixed pandas script.
-
-A normal pipeline would directly run the same functions in the same order.
-
-This demo starts from a user task, detects the task type, creates a plan, calls tools through an executor, and returns a structured result.
-
-The current version is still simple and mainly rule-based, but it follows the basic Agent / Tool / Executor pattern.
-
-## Current Limitations
-
-This project is intentionally small.
-
-Current limitations:
-
-- It is mainly rule-based.
-- It focuses only on CSV data classification.
-- It does not use a real LLM API by default.
-- It is not a general-purpose AI Agent.
-- Ambiguous fields still need manual review.
-- The classification quality depends on the current rule library.
-- It is not a production-level data governance system.
-
-## About the LLM Part
-
-The current version may include an optional or mock LLM interface, but the main demo does not depend on a real LLM API by default.
-
-This is intentional.
-
-The goal at this stage is to understand the Agent-style structure first:
-
-```text
-Agent decides what to do
-Executor runs the selected tool
-Tool performs the actual task
-Structured output records the result
-Report explains the result to humans
-```
-
-A real LLM API can be added later to help with ambiguous fields, but the project does not need to pretend to be more complex than it is.
-
-## Future Improvements
-
-Possible next steps:
-
-- Add a real LLM API for ambiguous field classification.
-- Expand the rule library.
-- Improve analysis based on sample values, not only column names.
-- Add a stricter JSON schema for structured output.
-- Support more file types besides CSV.
-- Add more test datasets.
-
-## Internship Relevance
-
-This project helped me understand the basic structure behind Agent-style systems before jumping into larger frameworks.
-
-Through this project, I practiced:
-
-- breaking a workflow into tools
-- using an executor to call tools
-- separating human-readable output from structured program output
-- explaining how an Agent-style workflow works
-- connecting data classification with privacy and risk review
-
-The project is small, but it gives me a clearer foundation for understanding more advanced AI Agent frameworks later.
+- total column count
+- classified column count
+- review-required column count
+- security-level summary
+- review-required list with candidate paths
+- detailed classification table with `classification_path`, `security_level`, `level_name`, `sharing_policy`, `open_policy`, `basis`, `confidence`, and `review_required`
