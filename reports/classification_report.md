@@ -3,27 +3,29 @@
 ## 汇总
 
 - Total columns: 6
-- Classified columns: 0
-- Review required columns: 6
+- Classified columns: 5
+- Review required columns: 1
+
+## 等级统计
+
+| Security Level | Count |
+|---|---:|
+| 3级 | 3 |
+| 4级 | 2 |
 
 ## 需要人工复核
 
 | Table | Column | Reason | Candidate Paths |
 |---|---|---|---|
-| patient | patient_name | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理; 业务资源 / 医疗服务(医院) / 临床服务 / 门诊合理用药; 业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写 |
-| patient | id_card_no | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 |
-| patient | diagnosis_result | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 基础资源 / 服务范围与对象 / 患者 / 患者信息 |
-| patient | treatment_plan | DASHSCOPE_API_KEY is not set. | 基础资源 / 服务范围与对象 / 患者 / 患者信息; 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息; 业务资源 / 医疗服务 (基层) / 基本医疗服务 / 住院管理 |
-| medical_settlement | insurance_amount | DASHSCOPE_API_KEY is not set. | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 |
-| medical_settlement | created_at | DASHSCOPE_API_KEY is not set. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_settlement | created_at | LLM confidence is below threshold. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
 
 ## Column 分类分级明细
 
 | Table | Column | Type | Description | Classification Path | Security Level | Level Name | Sharing Policy | Open Policy | Basis | Confidence | Review Required |
 |---|---|---|---|---|---|---|---|---|---|---:|---|
-| patient | patient_name | varchar | 患者姓名用于医疗服务中的身份确认 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
-| patient | id_card_no | varchar | 患者身份证件号码 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
-| patient | diagnosis_result | text | 患者诊断结果 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
-| patient | treatment_plan | text | 患者治疗方案 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
-| medical_settlement | insurance_amount | decimal | 医保结算金额 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
+| patient | patient_name | varchar | 患者姓名用于医疗服务中的身份确认 | 基础资源 / 服务范围与对象 / 患者 / 患者信息 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | patient_name 是患者身份识别的基本字段，用于医疗服务中的身份确认，符合‘患者信息’定义中‘身份识别、基本资料’和‘确保身份确认和沟通’的描述，且未涉及病历、诊断等敏感内容，故不属4级敏感信息。 | 0.95 | False |
+| patient | id_card_no | varchar | 患者身份证件号码 | 基础资源 / 服务范围与对象 / 患者 / 患者信息 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | 身份证件号码属于患者身份识别类基本资料，用于身份确认，符合'患者信息'定义；虽具敏感性，但未达到病历、诊断等高度私密程度，故不适用4级敏感信息分类 | 0.95 | False |
+| patient | diagnosis_result | text | 患者诊断结果 | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 | 4级 | 一般数据4级 | 有条件共享 | 不予开放 | diagnosis_result 字段明确表示患者诊断结果，属于病历类高度私密数据，符合候选规则中'患者敏感信息'定义 | 0.98 | False |
+| patient | treatment_plan | text | 患者治疗方案 | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 | 4级 | 一般数据4级 | 有条件共享 | 不予开放 | treatment_plan（治疗方案）属于患者病历类高度私密数据，直接关联诊疗决策与健康状况，符合‘患者敏感信息’定义中‘诊断结果、治疗方案等高度私密数据’的描述 | 0.95 | False |
+| medical_settlement | insurance_amount | decimal | 医保结算金额 | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | 字段名为insurance_amount，描述为'医保结算金额'，直接关联医保结算业务，属于医保接口管理范畴 | 0.95 | False |
 | medical_settlement | created_at | datetime | 记录创建时间 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |
