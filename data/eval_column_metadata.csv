@@ -32,3 +32,25 @@ generic_table,code,varchar,代码,,,True
 generic_table,record,text,记录,,,True
 generic_table,name,varchar,姓名,,,True
 audit_log,updated_at,datetime,记录更新时间,,,True
+empi,name,varchar,姓名,主题资源 / 电子病历数据库 / 基础字典 / 患者主索引,4级,False
+empi,id_card_no_short,varchar,身份证号,主题资源 / 电子病历数据库 / 基础字典 / 患者主索引,4级,False
+diagnosis,result,text,诊断结果,主题资源 / 电子病历数据库 / 临床诊疗 / 诊断明细信息,3级,False
+diagnosis,code,varchar,诊断编码,主题资源 / 电子病历数据库 / 临床诊疗 / 诊断明细信息,3级,False
+outpatient_visit,result,text,诊断结果,主题资源 / 电子病历数据库 / 临床诊疗 / 门诊就诊信息,3级,False
+inpatient_visit,status,varchar,住院状态,主题资源 / 电子病历数据库 / 临床诊疗 / 住院就诊信息,3级,False
+emr_progress,result,text,病情变化,主题资源 / 电子病历数据库 / 电子病历 / 病程记录,4级,False
+lab_result,result,text,结果,业务资源 / 医疗服务(医院) / 临床服务 / 临床检验信息管理,3级,False
+lab_result,status,varchar,检验状态,业务资源 / 医疗服务(医院) / 临床服务 / 临床检验信息管理,3级,False
+medical_settlement,amount,decimal,金额,主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务,3级,False
+insurance_interface,result,text,返回结果,业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理,3级,False
+resident_insurance,status,varchar,报销状态,业务资源 / 医疗保障 / 城镇居民基本医疗保险 / 报销审批,3级,False
+employee_insurance,status,varchar,缴费状态,业务资源 / 医疗保障 / 城镇职工基本医疗保险 / 缴费管理,1级,False
+employee_insurance,result,text,查询结果,业务资源 / 医疗保障 / 城镇职工基本医疗保险 / 信息查询,2级,False
+online_medical,status,varchar,预约状态,主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务,2级,False
+visit_card,balance,decimal,余额,业务资源 / 医疗服务(医院) / 医疗管理 / 就诊卡管理,3级,False
+inpatient_order,code,varchar,医嘱代码,业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理,3级,False
+prescription,content,text,处方内容,业务资源 / 医疗服务(医院) / 临床服务 / 门急诊处方和处置管理,3级,False
+clinical_path,status,varchar,执行状态,业务资源 / 医疗服务(医院) / 临床服务 / 临床路径管理,2级,False
+drug_dict,code,varchar,药品编码,主题资源 / 电子病历数据库 / 基础字典 / 项目/药品字典表,2级,False
+pharmacy_stock,amount,int,库存数量,业务资源 / 医疗服务(医院) / 医疗管理 / 药事管理,3级,False
+surgery_record,result,text,手术结果,业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理,3级,False

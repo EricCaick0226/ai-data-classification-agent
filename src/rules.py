@@ -1,3 +1,4 @@
+import copy
 from dataclasses import dataclass
 import math
 import os
@@ -122,7 +123,10 @@ class RuleCatalog:
             (score, rule) for score, rule in scored_rules
             if score >= WIDE_MIN_CANDIDATE_SCORE
         ][:max(limit, WIDE_CANDIDATE_LIMIT)]
-        wide_candidates = [rule for _, rule in wide_scored_candidates]
+        wide_candidates = [
+            _copy_candidate_rule(rule)
+            for _, rule in wide_scored_candidates
+        ]
 
         if not wide_candidates:
             return []
@@ -336,17 +340,20 @@ def _should_enrich_with_llm_profile(
     if not scored_candidates:
         return False
 
+    top_score, top_rule = scored_candidates[0]
+    second_score = scored_candidates[1][0] if len(scored_candidates) > 1 else 0
+    direct_match_length = _direct_literal_match_length(column_info, top_rule)
+    is_ambiguous_column = _is_ambiguous_column(column_info)
+
+    if len(scored_candidates) > 1 and top_score == second_score:
+        return True
+
     narrow_candidates = [
         (score, rule) for score, rule in scored_candidates
         if score >= MIN_CANDIDATE_SCORE
     ][:limit]
     if len(narrow_candidates) <= 2:
         return False
-
-    top_score, top_rule = scored_candidates[0]
-    second_score = scored_candidates[1][0] if len(scored_candidates) > 1 else 0
-    direct_match_length = _direct_literal_match_length(column_info, top_rule)
-    is_ambiguous_column = _is_ambiguous_column(column_info)
 
     if is_ambiguous_column and second_score >= top_score - CLOSE_SCORE_GAP:
         return True
@@ -374,6 +381,10 @@ def _with_candidate_score(rule, score, rank):
     rule["program_match_score"] = score
     rule["candidate_rank"] = rank
     return rule
+
+
+def _copy_candidate_rule(rule):
+    return copy.deepcopy(rule)
 
 
 def _match_profile_mode():

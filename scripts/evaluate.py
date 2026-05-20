@@ -35,6 +35,11 @@ def main():
     from rules import load_rule_catalog
 
     eval_df = _read_eval_input(args.input)
+    eval_df = _slice_eval_input(
+        df=eval_df,
+        offset=args.offset,
+        limit=args.limit,
+    )
     rule_catalog = load_rule_catalog(args.rules)
 
     reset_metrics()
@@ -93,6 +98,18 @@ def parse_args():
         default=None,
         help="Optional per-row evaluation CSV output path.",
     )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Only evaluate this many rows after applying --offset.",
+    )
+    parser.add_argument(
+        "--offset",
+        type=int,
+        default=0,
+        help="Skip this many rows before evaluation.",
+    )
     return parser.parse_args()
 
 
@@ -110,6 +127,19 @@ def _read_eval_input(input_path):
         )
 
     return df
+
+
+def _slice_eval_input(df, offset, limit):
+    if offset < 0:
+        raise ValueError("--offset must be >= 0.")
+
+    if limit is not None and limit < 0:
+        raise ValueError("--limit must be >= 0.")
+
+    if limit is None:
+        return df.iloc[offset:].copy()
+
+    return df.iloc[offset : offset + limit].copy()
 
 
 def _column_info(row):
