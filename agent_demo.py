@@ -45,15 +45,16 @@ def ensure_dependencies():
 
 ensure_dependencies()
 
-from agent_demo import parse_args, run_agent  # noqa: E402
+from agent_runner import parse_args, resolve_paths, run_agent  # noqa: E402
 
 
 def main():
     args = parse_args()
+    input_path, rules_path, output_path = resolve_paths(args)
     run_agent(
-        input_path=args.input,
-        rules_path=args.rules,
-        output_path=args.output,
+        input_path=input_path,
+        rules_path=rules_path,
+        output_path=output_path,
     )
 
 

@@ -66,7 +66,7 @@ pip install -r requirements.txt
 ## Run
 
 ```bash
-python src/agent_demo.py \
+python agent_demo.py \
   --input data/sample_column_metadata.csv \
   --rules /path/to/分类分级标准.xlsx \
   --output reports/classification_report.md

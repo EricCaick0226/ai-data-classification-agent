@@ -175,28 +175,52 @@ def parse_args():
     )
     parser.add_argument(
         "--input",
-        default=str(DEFAULT_INPUT),
+        default=None,
         help="CSV or Excel file containing database column metadata.",
     )
     parser.add_argument(
         "--rules",
-        default=str(DEFAULT_RULES),
+        default=None,
         help="Excel file containing classification and level rules.",
     )
     parser.add_argument(
         "--output",
-        default=str(DEFAULT_OUTPUT),
+        default=None,
         help="Markdown report output path.",
     )
     return parser.parse_args()
 
 
+def resolve_paths(args):
+    input_path = args.input or _prompt_path(
+        label="column metadata file",
+        default_path=DEFAULT_INPUT,
+    )
+    rules_path = args.rules or _prompt_path(
+        label="rule Excel file",
+        default_path=DEFAULT_RULES,
+    )
+    output_path = args.output or _prompt_path(
+        label="Markdown report output",
+        default_path=DEFAULT_OUTPUT,
+    )
+
+    return input_path, rules_path, output_path
+
+
+def _prompt_path(label, default_path):
+    prompt = f"Please enter {label} path [default: {default_path}]: "
+    value = input(prompt).strip()
+    return value or str(default_path)
+
+
 if __name__ == "__main__":
     args = parse_args()
+    input_path, rules_path, output_path = resolve_paths(args)
     final_result = run_agent(
-        input_path=args.input,
-        rules_path=args.rules,
-        output_path=args.output,
+        input_path=input_path,
+        rules_path=rules_path,
+        output_path=output_path,
     )
 
     print("\nFinal Agent Result:")
