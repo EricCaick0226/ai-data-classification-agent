@@ -1,7 +1,14 @@
 import argparse
 import json
+from pathlib import Path
 
 from agent_executor import execute_tool
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_INPUT = PROJECT_ROOT / "data" / "sample_column_metadata.csv"
+DEFAULT_RULES = Path("/Users/ericcai/Desktop/internfiles/分类分级标准.xlsx")
+DEFAULT_OUTPUT = PROJECT_ROOT / "reports" / "classification_report.md"
 
 
 def create_plan(input_path, rules_path, output_path):
@@ -168,17 +175,17 @@ def parse_args():
     )
     parser.add_argument(
         "--input",
-        required=True,
+        default=str(DEFAULT_INPUT),
         help="CSV or Excel file containing database column metadata.",
     )
     parser.add_argument(
         "--rules",
-        required=True,
+        default=str(DEFAULT_RULES),
         help="Excel file containing classification and level rules.",
     )
     parser.add_argument(
         "--output",
-        default="reports/classification_report.md",
+        default=str(DEFAULT_OUTPUT),
         help="Markdown report output path.",
     )
     return parser.parse_args()

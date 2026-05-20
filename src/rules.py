@@ -92,7 +92,15 @@ def load_rule_catalog(excel_path):
 
 
 def _read_template_sheet(excel_path, preferred_sheet_name, required_columns):
-    xls = pd.ExcelFile(excel_path)
+    try:
+        xls = pd.ExcelFile(excel_path)
+    except ImportError as exc:
+        raise RuntimeError(
+            "Reading rule Excel files requires openpyxl. "
+            "Use the project virtual environment: "
+            "source .venv/bin/activate, or run with .venv/bin/python."
+        ) from exc
+
     sheet_names = list(xls.sheet_names)
 
     candidate_sheets = []
@@ -101,7 +109,15 @@ def _read_template_sheet(excel_path, preferred_sheet_name, required_columns):
     candidate_sheets.extend(name for name in sheet_names if name not in candidate_sheets)
 
     for sheet_name in candidate_sheets:
-        raw_df = pd.read_excel(excel_path, sheet_name=sheet_name, header=None)
+        try:
+            raw_df = pd.read_excel(excel_path, sheet_name=sheet_name, header=None)
+        except ImportError as exc:
+            raise RuntimeError(
+                "Reading rule Excel files requires openpyxl. "
+                "Use the project virtual environment: "
+                "source .venv/bin/activate, or run with .venv/bin/python."
+            ) from exc
+
         header_index = _find_header_index(raw_df, required_columns)
         if header_index is None:
             continue

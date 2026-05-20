@@ -29,7 +29,14 @@ def read_column_metadata(file_path, sheet_name=None):
     if path.suffix.lower() == ".csv":
         df = pd.read_csv(path)
     elif path.suffix.lower() in {".xlsx", ".xls"}:
-        df = pd.read_excel(path, sheet_name=sheet_name or 0)
+        try:
+            df = pd.read_excel(path, sheet_name=sheet_name or 0)
+        except ImportError as exc:
+            raise RuntimeError(
+                "Reading column metadata Excel files requires openpyxl. "
+                "Use the project virtual environment: "
+                "source .venv/bin/activate, or run with .venv/bin/python."
+            ) from exc
     else:
         raise ValueError("Column metadata input must be a CSV or Excel file.")
 
