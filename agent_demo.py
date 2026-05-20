@@ -1,6 +1,5 @@
 from pathlib import Path
 import importlib.util
-import subprocess
 import sys
 
 
@@ -27,19 +26,12 @@ def ensure_dependencies():
     if not missing_packages:
         return
 
-    print(
-        "[Setup] Missing packages for current python3: "
-        + ", ".join(missing_packages)
-    )
-    print("[Setup] Installing with current interpreter...")
-    subprocess.check_call(
-        [
-            sys.executable,
-            "-m",
-            "pip",
-            "install",
-            *missing_packages,
-        ]
+    missing_list = ", ".join(missing_packages)
+    raise SystemExit(
+        "[Setup] Missing required packages for current Python: "
+        f"{missing_list}\n"
+        "[Setup] Install dependencies in your project environment first:\n"
+        "  python -m pip install -r requirements.txt"
     )
 
 
