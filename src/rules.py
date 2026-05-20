@@ -28,6 +28,27 @@ MIN_CANDIDATE_SCORE = 2
 WIDE_MIN_CANDIDATE_SCORE = 1
 DEFAULT_CANDIDATE_LIMIT = 20
 WIDE_CANDIDATE_LIMIT = 40
+CLEAR_SCORE_GAP = 5
+CLEAR_DIRECT_MATCH_LENGTH = 3
+CLEAR_STRONG_DIRECT_MATCH_LENGTH = 5
+AMBIGUOUS_FIELD_TOKENS = {
+    "amount",
+    "result",
+    "status",
+    "type",
+    "record",
+    "plan",
+    "value",
+    "code",
+    "金额",
+    "结果",
+    "状态",
+    "类型",
+    "记录",
+    "方案",
+    "数值",
+    "代码",
+}
 
 GENERIC_MATCH_TERMS = {
     "信息",
@@ -74,15 +95,23 @@ class RuleCatalog:
 
         source_text = _build_column_search_text(column_info)
         scored_rules = _score_rules(source_text, self.classification_rules)
-        wide_candidates = [
-            rule for score, rule in scored_rules
+        wide_scored_candidates = [
+            (score, rule) for score, rule in scored_rules
             if score >= WIDE_MIN_CANDIDATE_SCORE
         ][:max(limit, WIDE_CANDIDATE_LIMIT)]
+        wide_candidates = [rule for _, rule in wide_scored_candidates]
 
         if not wide_candidates:
             return []
 
-        _enrich_candidate_rules(column_info, wide_candidates)
+        if _should_enrich_with_llm_profile(
+            column_info=column_info,
+            source_text=source_text,
+            scored_candidates=wide_scored_candidates,
+            limit=limit,
+        ):
+            _enrich_candidate_rules(column_info, wide_candidates)
+
         rescored_candidates = _score_rules(source_text, wide_candidates)
 
         return [
@@ -263,6 +292,138 @@ def _score_rules(source_text, rules):
         reverse=True,
     )
     return scored_rules
+
+
+def _should_enrich_with_llm_profile(
+    column_info,
+    source_text,
+    scored_candidates,
+    limit,
+):
+    if not scored_candidates:
+        return False
+
+    narrow_candidates = [
+        (score, rule) for score, rule in scored_candidates
+        if score >= MIN_CANDIDATE_SCORE
+    ][:limit]
+    if len(narrow_candidates) <= 2:
+        return False
+
+    top_score, top_rule = scored_candidates[0]
+    second_score = scored_candidates[1][0] if len(scored_candidates) > 1 else 0
+    direct_match_length = _direct_literal_match_length(column_info, top_rule)
+    is_ambiguous_column = _is_ambiguous_column(column_info)
+
+    if (
+        direct_match_length >= CLEAR_DIRECT_MATCH_LENGTH
+        and (
+            not is_ambiguous_column
+            or direct_match_length >= CLEAR_STRONG_DIRECT_MATCH_LENGTH
+        )
+    ):
+        return False
+
+    if (
+        top_score >= second_score + CLEAR_SCORE_GAP
+        and _has_high_quality_term_match(source_text, top_rule)
+        and not is_ambiguous_column
+    ):
+        return False
+
+    return True
+
+
+def _has_high_quality_term_match(source_text, rule):
+    for term in rule.get("match_terms", []):
+        value = term["value"]
+        if value not in source_text:
+            continue
+
+        if term["score"] >= 6:
+            return True
+
+        if _has_strong_token(value):
+            return True
+
+    return False
+
+
+def _direct_literal_match_length(column_info, rule):
+    column_text = _normalize_for_match(
+        " ".join(
+            str(column_info.get(key, ""))
+            for key in ("table_name", "column_name", "column_description")
+        )
+    )
+    rule_text = _normalize_for_match(
+        " ".join(
+            [
+                rule.get("classification_path", ""),
+                rule.get("classification_description", ""),
+            ]
+        )
+    )
+
+    return _longest_common_token_length(column_text, rule_text)
+
+
+def _is_ambiguous_column(column_info):
+    values = [
+        str(column_info.get("column_name", "")),
+        str(column_info.get("column_description", "")),
+    ]
+    tokens = []
+    for value in values:
+        tokens.extend(_extract_terms(value))
+        tokens.extend(_literal_match_tokens(_normalize_for_match(value)))
+
+    return any(token in AMBIGUOUS_FIELD_TOKENS for token in tokens)
+
+
+def _longest_common_token_length(left, right):
+    left_tokens = _literal_match_tokens(left)
+    right_tokens = _literal_match_tokens(right)
+    longest = 0
+
+    for left_token in left_tokens:
+        for right_token in right_tokens:
+            longest = max(longest, _longest_common_substring_length(left_token, right_token))
+            if longest >= CLEAR_STRONG_DIRECT_MATCH_LENGTH:
+                return longest
+
+    return longest
+
+
+def _literal_match_tokens(value):
+    return re.findall(r"[\u4e00-\u9fff]+|[a-zA-Z0-9_]+", value)
+
+
+def _longest_common_substring_length(left, right):
+    if not left or not right:
+        return 0
+
+    previous = [0] * (len(right) + 1)
+    longest = 0
+    for left_index in range(1, len(left) + 1):
+        current = [0] * (len(right) + 1)
+        for right_index in range(1, len(right) + 1):
+            if left[left_index - 1] != right[right_index - 1]:
+                continue
+
+            current[right_index] = previous[right_index - 1] + 1
+            longest = max(longest, current[right_index])
+
+        previous = current
+
+    return longest
+
+
+def _has_strong_token(value):
+    if re.fullmatch(r"[a-zA-Z0-9_]+", value):
+        return len(value) >= 4
+
+    return len(value) >= 3
 
 
 def _enrich_candidate_rules(column_info, candidate_rules):
