@@ -55,6 +55,7 @@ GENERIC_MATCH_TERMS = {
 class RuleCatalog:
     classification_rules: list[dict]
     level_rules: dict[str, dict]
+    match_profile_status: dict | None = None
 
     def get_rule_by_path(self, classification_path):
         for rule in self.classification_rules:
@@ -105,6 +106,7 @@ def load_rule_catalog(excel_path):
     )
 
     classification_rules = _build_classification_rules(classification_df)
+    match_profile_status = _enrich_classification_rules(excel_path, classification_rules)
     level_rules = _build_level_rules(level_df)
 
     if not classification_rules:
@@ -116,6 +118,7 @@ def load_rule_catalog(excel_path):
     return RuleCatalog(
         classification_rules=classification_rules,
         level_rules=level_rules,
+        match_profile_status=match_profile_status,
     )
 
 
@@ -233,6 +236,10 @@ def _build_level_rules(df):
 def _score_rule(source_text, rule):
     score = 0
 
+    for term in rule.get("negative_terms", []):
+        if term in source_text:
+            score -= 4
+
     for term in rule.get("match_terms", []):
         value = term["value"]
         if value not in source_text:
@@ -241,6 +248,27 @@ def _score_rule(source_text, rule):
         score += term["score"]
 
     return score
+
+
+def _enrich_classification_rules(excel_path, classification_rules):
+    try:
+        from llm_match_profile import enrich_rules_with_llm_match_profile
+    except ImportError:
+        return {
+            "enabled": False,
+            "source": "import_error",
+            "updated_rules": 0,
+        }
+
+    try:
+        return enrich_rules_with_llm_match_profile(excel_path, classification_rules)
+    except Exception as exc:
+        return {
+            "enabled": True,
+            "source": "error",
+            "updated_rules": 0,
+            "error": str(exc),
+        }
 
 
 def _build_column_search_text(column_info):

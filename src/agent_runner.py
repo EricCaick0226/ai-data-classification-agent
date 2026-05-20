@@ -96,6 +96,12 @@ def run_agent(
         f"{len(rule_catalog.classification_rules)} classification rules and "
         f"{len(rule_catalog.level_rules)} level rules."
     )
+    if rule_catalog.match_profile_status:
+        print(
+            "[Executor] LLM match profile: "
+            f"{rule_catalog.match_profile_status['source']}, "
+            f"updated_rules={rule_catalog.match_profile_status['updated_rules']}."
+        )
 
     classification_results = _classify_each_column(
         column_infos=column_infos,
