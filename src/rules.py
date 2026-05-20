@@ -25,7 +25,9 @@ LEVEL_COLUMNS = [
 CLASSIFICATION_SHEET_NAME = "分类"
 LEVEL_SHEET_NAME = "分级"
 MIN_CANDIDATE_SCORE = 2
+WIDE_MIN_CANDIDATE_SCORE = 1
 DEFAULT_CANDIDATE_LIMIT = 20
+WIDE_CANDIDATE_LIMIT = 40
 
 GENERIC_MATCH_TERMS = {
     "信息",
@@ -70,25 +72,21 @@ class RuleCatalog:
         if _is_low_semantic_technical_field(column_info):
             return []
 
-        scored_rules = []
         source_text = _build_column_search_text(column_info)
+        scored_rules = _score_rules(source_text, self.classification_rules)
+        wide_candidates = [
+            rule for score, rule in scored_rules
+            if score >= WIDE_MIN_CANDIDATE_SCORE
+        ][:max(limit, WIDE_CANDIDATE_LIMIT)]
 
-        for rule in self.classification_rules:
-            score = _score_rule(source_text, rule)
-            scored_rules.append((score, rule))
+        if not wide_candidates:
+            return []
 
-        scored_rules.sort(
-            key=lambda item: (
-                item[0],
-                len(item[1].get("match_terms", [])),
-                len(item[1]["classification_description"]),
-                item[1]["classification_path"],
-            ),
-            reverse=True,
-        )
+        _enrich_candidate_rules(column_info, wide_candidates)
+        rescored_candidates = _score_rules(source_text, wide_candidates)
 
         return [
-            rule for score, rule in scored_rules
+            rule for score, rule in rescored_candidates
             if score >= MIN_CANDIDATE_SCORE
         ][:limit]
 
@@ -106,7 +104,7 @@ def load_rule_catalog(excel_path):
     )
 
     classification_rules = _build_classification_rules(classification_df)
-    match_profile_status = _enrich_classification_rules(excel_path, classification_rules)
+    match_profile_status = _match_profile_status()
     level_rules = _build_level_rules(level_df)
 
     if not classification_rules:
@@ -250,9 +248,38 @@ def _score_rule(source_text, rule):
     return score
 
 
-def _enrich_classification_rules(excel_path, classification_rules):
+def _score_rules(source_text, rules):
+    scored_rules = [
+        (_score_rule(source_text, rule), rule)
+        for rule in rules
+    ]
+    scored_rules.sort(
+        key=lambda item: (
+            item[0],
+            len(item[1].get("match_terms", [])),
+            len(item[1]["classification_description"]),
+            item[1]["classification_path"],
+        ),
+        reverse=True,
+    )
+    return scored_rules
+
+
+def _enrich_candidate_rules(column_info, candidate_rules):
     try:
-        from llm_match_profile import enrich_rules_with_llm_match_profile
+        from llm_match_profile import enrich_candidate_rules_for_column
+    except ImportError:
+        return
+
+    try:
+        enrich_candidate_rules_for_column(column_info, candidate_rules)
+    except Exception:
+        return
+
+
+def _match_profile_status():
+    try:
+        from llm_match_profile import get_match_profile_status
     except ImportError:
         return {
             "enabled": False,
@@ -260,15 +287,7 @@ def _enrich_classification_rules(excel_path, classification_rules):
             "updated_rules": 0,
         }
 
-    try:
-        return enrich_rules_with_llm_match_profile(excel_path, classification_rules)
-    except Exception as exc:
-        return {
-            "enabled": True,
-            "source": "error",
-            "updated_rules": 0,
-            "error": str(exc),
-        }
+    return get_match_profile_status()
 
 
 def _build_column_search_text(column_info):
@@ -345,14 +364,20 @@ def _prune_common_match_terms(rules):
 
     max_common_count = max(5, len(rules) // 20)
     for rule in rules:
-        rule["match_terms"] = [
-            term for term in rule.get("match_terms", [])
+        pruned_terms = []
+        for term in rule.get("match_terms", []):
+            if _is_context_fragment(term["value"]):
+                continue
+
             if (
-                term["score"] >= 6
-                or term_counts.get(term["value"], 0) <= max_common_count
-            )
-            and not _is_context_fragment(term["value"])
-        ]
+                term["score"] < 6
+                and term_counts.get(term["value"], 0) > max_common_count
+            ):
+                term = {**term, "score": 1}
+
+            pruned_terms.append(term)
+
+        rule["match_terms"] = pruned_terms
 
 
 def _add_match_term(terms, value, score):

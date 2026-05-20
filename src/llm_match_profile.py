@@ -8,7 +8,6 @@ BASE_URL = os.getenv("OPENAI_BASE_URL", "http://mc-llm-api.dev.mchz.com.cn/v1")
 MODEL = os.getenv("MODEL", "qwen-plus")
 TIMEOUT_SECONDS = float(os.getenv("TIMEOUT_SECONDS", "30"))
 PROMPT_VERSION = "llm-match-profile-v1"
-DEFAULT_BATCH_SIZE = 8
 
 GENERIC_PROFILE_TERMS = {
     "信息",
@@ -28,7 +27,7 @@ GENERIC_PROFILE_TERMS = {
 }
 
 
-def enrich_rules_with_llm_match_profile(excel_path, rules):
+def get_match_profile_status():
     if not _is_enabled():
         return {
             "enabled": False,
@@ -43,12 +42,26 @@ def enrich_rules_with_llm_match_profile(excel_path, rules):
             "updated_rules": 0,
         }
 
-    profile_payload = _generate_profile(rules)
-
-    updated_rules = _merge_profile_into_rules(rules, profile_payload)
     return {
         "enabled": True,
-        "source": "llm",
+        "source": "candidate_level",
+        "updated_rules": 0,
+    }
+
+
+def enrich_candidate_rules_for_column(column_info, candidate_rules):
+    if not _is_enabled() or not API_KEY or not candidate_rules:
+        return {
+            "enabled": _is_enabled(),
+            "source": "missing_api_key" if _is_enabled() and not API_KEY else "disabled",
+            "updated_rules": 0,
+        }
+
+    profile_payload = _generate_column_profile(column_info, candidate_rules)
+    updated_rules = _merge_profile_into_rules(candidate_rules, profile_payload)
+    return {
+        "enabled": True,
+        "source": "candidate_level_llm",
         "updated_rules": updated_rules,
     }
 
@@ -58,49 +71,27 @@ def _is_enabled():
     return value.lower() not in {"0", "false", "no", "off"}
 
 
-def _generate_profile(rules):
-    selected_rules = _limited_rules(rules)
-    batches = [
-        selected_rules[index : index + DEFAULT_BATCH_SIZE]
-        for index in range(0, len(selected_rules), DEFAULT_BATCH_SIZE)
-    ]
-
-    profiles = []
+def _generate_column_profile(column_info, candidate_rules):
     client = _build_client()
-    for batch in batches:
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=_build_messages(batch),
-            temperature=0,
-        )
-        content = response.choices[0].message.content or ""
-        parsed = _parse_json_object(content)
-        if parsed is None:
-            continue
-
-        profiles.extend(_normalize_profiles(parsed.get("profiles", [])))
+    response = client.chat.completions.create(
+        model=MODEL,
+        messages=_build_column_messages(column_info, candidate_rules),
+        temperature=0,
+    )
+    content = response.choices[0].message.content or ""
+    parsed = _parse_json_object(content)
+    if parsed is None:
+        return {
+            "prompt_version": PROMPT_VERSION,
+            "model": MODEL,
+            "profiles": [],
+        }
 
     return {
         "prompt_version": PROMPT_VERSION,
         "model": MODEL,
-        "profiles": profiles,
+        "profiles": _normalize_profiles(parsed.get("profiles", [])),
     }
-
-
-def _limited_rules(rules):
-    limit = os.getenv("LLM_MATCH_PROFILE_LIMIT")
-    if not limit:
-        return rules
-
-    try:
-        limit_value = int(limit)
-    except ValueError:
-        return rules
-
-    if limit_value <= 0:
-        return rules
-
-    return rules[:limit_value]
 
 
 def _build_client():
@@ -124,36 +115,45 @@ def _build_client():
     )
 
 
-def _build_messages(rules):
-    rule_payload = [
+def _build_column_messages(column_info, candidate_rules):
+    candidate_payload = [
         {
             "classification_path": rule["classification_path"],
             "recommended_level": rule["recommended_level"],
             "classification_description": rule["classification_description"],
+            "existing_match_terms": [
+                term["value"] for term in rule.get("match_terms", [])[:10]
+            ],
         }
-        for rule in rules
+        for rule in candidate_rules
     ]
 
     system_prompt = (
-        "你负责为数据分类规则生成候选召回辅助词。"
-        "这些词只用于帮助程序召回候选分类，不用于直接决定最终分类。"
-        "不要创造新的 classification_path，不要输出 Markdown。"
-        "避免'信息''数据''管理''服务'这类泛词。"
+        "你负责为当前数据库字段生成候选召回辅助词。"
+        "输入里已有程序宽召回得到的候选标准分类。"
+        "你的任务不是最终分类，而是帮助程序判断这些候选中哪些更可能匹配当前字段。"
+        "只允许为输入候选中的 classification_path 生成 match profile，不能创造新路径。"
+        "生成的词将用于匹配 table_name.column_name、column_description。"
+        "避免输出泛词，例如'信息''数据''记录''管理''服务''系统''业务'。"
+        "只返回一个 JSON 对象，不要输出 Markdown 或解释性前后缀。"
     )
     user_prompt = {
-        "rules": rule_payload,
+        "column": column_info,
+        "candidate_rules": candidate_payload,
         "task": (
-            "为每条规则生成更准确的 match profile。"
-            "重点补充字段名可能出现的英文、拼音或 snake_case 表达。"
+            "针对当前 column，为每条确实相关的候选规则补充 match profile。"
+            "优先生成数据库字段名中可能出现的英文、缩写、snake_case，以及字段描述中可能出现的中文同义表达。"
+            "如果候选规则与当前字段明显无关，可以只返回 negative_terms 或不返回该候选。"
+            "例如字段 diagnosis_result 与'诊断明细信息'相关时，应考虑 diagnosis、diagnosis_result、clinical_diagnosis、诊断结果、疾病诊断 等表达。"
         ),
         "required_output_schema": {
             "profiles": [
                 {
-                    "classification_path": "必须与输入完全一致",
-                    "core_terms": ["规则原文中的核心业务词，最多 6 个"],
-                    "synonyms": ["常见中文同义表达，最多 6 个"],
-                    "column_name_hints": ["常见英文字段名或 snake_case，最多 8 个"],
-                    "negative_terms": ["容易误召回但不应匹配的词，最多 4 个"],
+                    "classification_path": "必须与 candidate_rules 中某条完全一致",
+                    "core_terms": ["当前字段和该规则之间最关键的中文业务词，最多 6 个"],
+                    "synonyms": ["当前字段描述中可能出现的中文同义表达，最多 6 个"],
+                    "column_name_hints": ["当前字段名或相似字段名可能出现的英文/snake_case，最多 8 个"],
+                    "negative_terms": ["当前字段容易误召回但不应匹配该规则的词，最多 4 个"],
                 }
             ]
         },
