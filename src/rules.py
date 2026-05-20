@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 import math
+import os
 import re
 
 import pandas as pd
@@ -29,8 +30,10 @@ WIDE_MIN_CANDIDATE_SCORE = 1
 DEFAULT_CANDIDATE_LIMIT = 20
 WIDE_CANDIDATE_LIMIT = 40
 CLEAR_SCORE_GAP = 5
+CLOSE_SCORE_GAP = 4
 CLEAR_DIRECT_MATCH_LENGTH = 3
 CLEAR_STRONG_DIRECT_MATCH_LENGTH = 5
+MATCH_PROFILE_MODES = {"off", "always", "auto"}
 AMBIGUOUS_FIELD_TOKENS = {
     "amount",
     "result",
@@ -48,6 +51,23 @@ AMBIGUOUS_FIELD_TOKENS = {
     "方案",
     "数值",
     "代码",
+}
+LOW_INFORMATION_FIELD_TOKENS = AMBIGUOUS_FIELD_TOKENS | {
+    "name",
+    "姓名",
+}
+GENERIC_TABLE_TOKENS = {
+    "generic",
+    "generic_table",
+    "table",
+    "data",
+    "record",
+    "info",
+    "通用",
+    "表",
+    "数据",
+    "记录",
+    "信息",
 }
 
 GENERIC_MATCH_TERMS = {
@@ -90,7 +110,10 @@ class RuleCatalog:
         return self.level_rules.get(str(security_level).strip())
 
     def get_candidate_rules(self, column_info, limit=DEFAULT_CANDIDATE_LIMIT):
-        if _is_low_semantic_technical_field(column_info):
+        if (
+            _is_low_semantic_technical_field(column_info)
+            or _is_low_information_generic_field(column_info)
+        ):
             return []
 
         source_text = _build_column_search_text(column_info)
@@ -114,10 +137,13 @@ class RuleCatalog:
 
         rescored_candidates = _score_rules(source_text, wide_candidates)
 
-        return [
-            rule for score, rule in rescored_candidates
+        candidate_rules = [
+            _with_candidate_score(rule, score, rank)
+            for rank, (score, rule) in enumerate(rescored_candidates, start=1)
             if score >= MIN_CANDIDATE_SCORE
         ][:limit]
+
+        return candidate_rules
 
 
 def load_rule_catalog(excel_path):
@@ -300,6 +326,13 @@ def _should_enrich_with_llm_profile(
     scored_candidates,
     limit,
 ):
+    mode = _match_profile_mode()
+    if mode == "off":
+        return False
+
+    if mode == "always":
+        return bool(scored_candidates)
+
     if not scored_candidates:
         return False
 
@@ -314,6 +347,9 @@ def _should_enrich_with_llm_profile(
     second_score = scored_candidates[1][0] if len(scored_candidates) > 1 else 0
     direct_match_length = _direct_literal_match_length(column_info, top_rule)
     is_ambiguous_column = _is_ambiguous_column(column_info)
+
+    if is_ambiguous_column and second_score >= top_score - CLOSE_SCORE_GAP:
+        return True
 
     if (
         direct_match_length >= CLEAR_DIRECT_MATCH_LENGTH
@@ -332,6 +368,23 @@ def _should_enrich_with_llm_profile(
         return False
 
     return True
+
+
+def _with_candidate_score(rule, score, rank):
+    rule["program_match_score"] = score
+    rule["candidate_rank"] = rank
+    return rule
+
+
+def _match_profile_mode():
+    if os.getenv("ENABLE_LLM_MATCH_PROFILE", "1").lower() in {"0", "false", "no", "off"}:
+        return "off"
+
+    mode = os.getenv("LLM_MATCH_PROFILE_MODE", "auto").strip().lower()
+    if mode not in MATCH_PROFILE_MODES:
+        return "auto"
+
+    return mode
 
 
 def _has_high_quality_term_match(source_text, rule):
@@ -379,6 +432,34 @@ def _is_ambiguous_column(column_info):
         tokens.extend(_literal_match_tokens(_normalize_for_match(value)))
 
     return any(token in AMBIGUOUS_FIELD_TOKENS for token in tokens)
+
+
+def _is_low_information_generic_field(column_info):
+    column_tokens = _field_tokens(column_info.get("column_name", ""))
+    description_tokens = _field_tokens(column_info.get("column_description", ""))
+    table_tokens = _field_tokens(column_info.get("table_name", ""))
+
+    if not column_tokens:
+        return False
+
+    if not all(token in LOW_INFORMATION_FIELD_TOKENS for token in column_tokens):
+        return False
+
+    if description_tokens and not all(
+        token in LOW_INFORMATION_FIELD_TOKENS
+        for token in description_tokens
+    ):
+        return False
+
+    return not table_tokens or all(token in GENERIC_TABLE_TOKENS for token in table_tokens)
+
+
+def _field_tokens(value):
+    tokens = []
+    normalized_value = _normalize_for_match(value)
+    tokens.extend(_extract_terms(value))
+    tokens.extend(_literal_match_tokens(normalized_value))
+    return [token for token in dict.fromkeys(tokens) if token]
 
 
 def _longest_common_token_length(left, right):

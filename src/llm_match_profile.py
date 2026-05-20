@@ -2,12 +2,15 @@ import json
 import os
 import re
 
+from llm_metrics import increment_metric
+
 
 API_KEY = os.getenv("DASHSCOPE_API_KEY")
 BASE_URL = os.getenv("OPENAI_BASE_URL", "http://mc-llm-api.dev.mchz.com.cn/v1")
 MODEL = os.getenv("MODEL", "qwen-plus")
 TIMEOUT_SECONDS = float(os.getenv("TIMEOUT_SECONDS", "30"))
 PROMPT_VERSION = "llm-match-profile-v1"
+MATCH_PROFILE_MODES = {"off", "always", "auto"}
 
 GENERIC_PROFILE_TERMS = {
     "信息",
@@ -32,6 +35,7 @@ def get_match_profile_status():
         return {
             "enabled": False,
             "source": "disabled",
+            "mode": _match_profile_mode(),
             "updated_rules": 0,
         }
 
@@ -39,12 +43,14 @@ def get_match_profile_status():
         return {
             "enabled": True,
             "source": "missing_api_key",
+            "mode": _match_profile_mode(),
             "updated_rules": 0,
         }
 
     return {
         "enabled": True,
         "source": "candidate_level",
+        "mode": _match_profile_mode(),
         "updated_rules": 0,
     }
 
@@ -67,12 +73,24 @@ def enrich_candidate_rules_for_column(column_info, candidate_rules):
 
 
 def _is_enabled():
+    if _match_profile_mode() == "off":
+        return False
+
     value = os.getenv("ENABLE_LLM_MATCH_PROFILE", "1")
     return value.lower() not in {"0", "false", "no", "off"}
 
 
+def _match_profile_mode():
+    mode = os.getenv("LLM_MATCH_PROFILE_MODE", "auto").strip().lower()
+    if mode not in MATCH_PROFILE_MODES:
+        return "auto"
+
+    return mode
+
+
 def _generate_column_profile(column_info, candidate_rules):
     client = _build_client()
+    increment_metric("match_profile_llm_calls")
     response = client.chat.completions.create(
         model=MODEL,
         messages=_build_column_messages(column_info, candidate_rules),

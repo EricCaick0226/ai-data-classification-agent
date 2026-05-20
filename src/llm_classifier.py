@@ -2,6 +2,8 @@ import json
 import os
 import re
 
+from llm_metrics import increment_metric
+
 
 API_KEY = os.getenv("DASHSCOPE_API_KEY")
 BASE_URL = os.getenv("OPENAI_BASE_URL", "http://mc-llm-api.dev.mchz.com.cn/v1")
@@ -20,6 +22,7 @@ def classify_column_with_llm(column_info, candidate_rules, level_rules):
     messages = _build_messages(column_info, candidate_rules, level_rules)
 
     try:
+        increment_metric("classifier_llm_calls")
         response = client.chat.completions.create(
             model=MODEL,
             messages=messages,
@@ -69,6 +72,8 @@ def _build_client():
 def _build_messages(column_info, candidate_rules, level_rules):
     candidate_payload = [
         {
+            "candidate_rank": rule.get("candidate_rank"),
+            "program_match_score": rule.get("program_match_score"),
             "classification_path": rule["classification_path"],
             "recommended_level": rule["recommended_level"],
             "classification_description": rule["classification_description"],
@@ -86,6 +91,8 @@ def _build_messages(column_info, candidate_rules, level_rules):
         "请根据 table_name、column_name、column_type、column_description 判断 column 语义。"
         "候选规则中的 match_profile 是上一阶段 LLM 基于当前字段生成的匹配辅助信息，"
         "只用于理解字段与候选分类的语义关系，不能替代规则 Excel。"
+        "candidate_rank 和 program_match_score 来自程序宽召回，分数越高、排名越靠前，"
+        "表示字段文本与规则文本的字面匹配越强；当语义证据充分时，应优先考虑高排名候选。"
         "选择分类时必须同时匹配字段语义和分类路径上下文，"
         "不能只因为某个关键词命中就选择更具体的业务场景路径。"
         "如果某个具体候选的分类说明直接覆盖字段的核心语义，"
