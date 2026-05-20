@@ -72,21 +72,7 @@ python agent_demo.py \
   --output reports/classification_report.md
 ```
 
-For small inputs, the Agent classifies columns one by one. For larger inputs, it automatically uses batch LLM classification:
-
-```bash
-python agent_demo.py \
-  --input data/massive_column_metadata.csv \
-  --rules /path/to/分类分级标准.xlsx \
-  --output reports/classification_report.md \
-  --batch-threshold 10 \
-  --batch-size 10
-```
-
-Defaults:
-
-- `--batch-threshold 10`: inputs with 10 or fewer columns use single-column classification.
-- `--batch-size 10`: larger inputs are classified in batches of 10 columns.
+The Agent classifies columns one by one. This keeps the demo flow simple and easy to inspect.
 
 If `DASHSCOPE_API_KEY` is not set, the Agent still loads rules, builds candidates, and generates a Markdown report, but every column is marked as `review_required=true` because no trusted LLM judgment was produced.
 
