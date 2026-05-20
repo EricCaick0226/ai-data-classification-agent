@@ -129,11 +129,13 @@ def _build_column_messages(column_info, candidate_rules):
     ]
 
     system_prompt = (
-        "你负责为当前数据库字段生成候选召回辅助词。"
+        "你负责为当前数据库字段生成可验证的候选匹配线索。"
         "输入里已有程序宽召回得到的候选标准分类。"
-        "你的任务不是最终分类，而是帮助程序判断这些候选中哪些更可能匹配当前字段。"
+        "你的任务不是最终分类、不是候选重排，也不是为每个候选寻找理由。"
+        "你只能为与当前字段有直接证据关系的候选生成短 match profile。"
         "只允许为输入候选中的 classification_path 生成 match profile，不能创造新路径。"
-        "生成的词将用于匹配 table_name.column_name、column_description。"
+        "positive terms 必须能被 table_name、column_name、column_description 或候选规则文本直接支持。"
+        "如果字段元数据不支持候选路径中的具体上下文，不要生成 positive terms；可以生成 negative_terms。"
         "避免输出泛词，例如'信息''数据''记录''管理''服务''系统''业务'。"
         "只返回一个 JSON 对象，不要输出 Markdown 或解释性前后缀。"
     )
@@ -141,19 +143,18 @@ def _build_column_messages(column_info, candidate_rules):
         "column": column_info,
         "candidate_rules": candidate_payload,
         "task": (
-            "针对当前 column，为每条确实相关的候选规则补充 match profile。"
-            "优先生成数据库字段名中可能出现的英文、缩写、snake_case，以及字段描述中可能出现的中文同义表达。"
-            "如果候选规则与当前字段明显无关，可以只返回 negative_terms 或不返回该候选。"
-            "例如字段 diagnosis_result 与'诊断明细信息'相关时，应考虑 diagnosis、diagnosis_result、clinical_diagnosis、诊断结果、疾病诊断 等表达。"
+            "只为少数有直接证据的候选生成 profile。"
+            "如果候选只是因为宽泛关键词被召回，或者候选路径比字段上下文更具体但字段没有支持该上下文，不要返回该候选的 positive profile。"
+            "column_name_hints 只能包含当前字段名、当前字段名的合理拆分或直接等价表达。"
+            "negative_terms 应描述候选路径中存在但当前字段元数据没有体现的具体上下文。"
         ),
         "required_output_schema": {
             "profiles": [
                 {
                     "classification_path": "必须与 candidate_rules 中某条完全一致",
-                    "core_terms": ["当前字段和该规则之间最关键的中文业务词，最多 6 个"],
-                    "synonyms": ["当前字段描述中可能出现的中文同义表达，最多 6 个"],
-                    "column_name_hints": ["当前字段名或相似字段名可能出现的英文/snake_case，最多 8 个"],
-                    "negative_terms": ["当前字段容易误召回但不应匹配该规则的词，最多 4 个"],
+                    "positive_terms": ["当前字段与该候选之间可直接验证的匹配词，最多 4 个"],
+                    "column_name_hints": ["当前字段名或直接等价字段名表达，最多 4 个"],
+                    "negative_terms": ["候选路径中当前字段元数据不支持的具体上下文，最多 3 个"],
                 }
             ]
         },
@@ -178,13 +179,17 @@ def _normalize_profiles(profiles):
         normalized_profiles.append(
             {
                 "classification_path": classification_path,
-                "core_terms": _clean_term_list(profile.get("core_terms", []), 6),
-                "synonyms": _clean_term_list(profile.get("synonyms", []), 6),
+                "positive_terms": _clean_term_list(
+                    profile.get("positive_terms", []),
+                    4,
+                ),
+                "core_terms": _clean_term_list(profile.get("core_terms", []), 4),
+                "synonyms": _clean_term_list(profile.get("synonyms", []), 4),
                 "column_name_hints": _clean_term_list(
                     profile.get("column_name_hints", []),
-                    8,
+                    4,
                 ),
-                "negative_terms": _clean_term_list(profile.get("negative_terms", []), 4),
+                "negative_terms": _clean_term_list(profile.get("negative_terms", []), 3),
             }
         )
 
@@ -225,6 +230,7 @@ def _merge_profile_into_rules(rules, payload):
             continue
 
         rule["llm_match_profile"] = {
+            "positive_terms": profile.get("positive_terms", []),
             "core_terms": profile.get("core_terms", []),
             "synonyms": profile.get("synonyms", []),
             "column_name_hints": profile.get("column_name_hints", []),
@@ -232,6 +238,8 @@ def _merge_profile_into_rules(rules, payload):
         }
 
         before_count = len(rule.get("match_terms", []))
+        for term in profile.get("positive_terms", []):
+            _merge_match_term(rule, term, 5)
         for term in profile.get("core_terms", []):
             _merge_match_term(rule, term, 5)
         for term in profile.get("synonyms", []):
