@@ -54,8 +54,8 @@ def enrich_rules_with_llm_match_profile(excel_path, rules):
 
 
 def _is_enabled():
-    value = os.getenv("ENABLE_LLM_MATCH_PROFILE", "")
-    return value.lower() in {"1", "true", "yes", "on"}
+    value = os.getenv("ENABLE_LLM_MATCH_PROFILE", "1")
+    return value.lower() not in {"0", "false", "no", "off"}
 
 
 def _generate_profile(rules):
