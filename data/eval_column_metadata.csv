@@ -1,0 +1,26 @@
+table_name,column_name,column_type,column_description,expected_classification_path,expected_security_level,expected_review_required
+patient,patient_name,varchar,患者姓名用于医疗服务中的身份确认,基础资源 / 服务范围与对象 / 患者 / 患者信息,3级,False
+patient,patient_phone,varchar,患者联系电话用于医疗服务沟通,基础资源 / 服务范围与对象 / 患者 / 患者信息,3级,False
+patient,id_card_no,varchar,患者身份证件号码,基础资源 / 服务范围与对象 / 患者 / 患者信息,3级,False
+empi,master_patient_id,varchar,患者主索引唯一标识用于合并患者身份信息,主题资源 / 电子病历数据库 / 基础字典 / 患者主索引,4级,False
+empi,id_card_no,varchar,患者主索引中的身份证号用于唯一识别患者,主题资源 / 电子病历数据库 / 基础字典 / 患者主索引,4级,False
+patient,diagnosis_result,text,患者诊断结果,基础资源 / 服务范围与对象 / 患者 / 患者敏感信息,4级,False
+emr_diagnosis,disease_name,varchar,临床诊疗过程中的疾病名称,主题资源 / 电子病历数据库 / 临床诊疗 / 诊断明细信息,3级,False
+emr_diagnosis,diagnosis_time,datetime,临床诊疗过程中的诊断时间,主题资源 / 电子病历数据库 / 临床诊疗 / 诊断明细信息,3级,False
+patient,treatment_plan,text,患者治疗方案,基础资源 / 服务范围与对象 / 患者 / 患者敏感信息,4级,False
+outpatient_emr,treatment_plan,text,门急诊电子病历中的治疗方案,业务资源 / 医疗服务(医院) / 临床服务 / 门急诊电子病历,4级,False
+inpatient_record,progress_note,text,住院期间病情变化和治疗效果记录,业务资源 / 医疗服务(医院) / 临床服务 / 住院病历书写,3级,False
+lab_result,test_item_name,varchar,临床检验项目名称,业务资源 / 医疗服务(医院) / 临床服务 / 临床检验信息管理,3级,False
+lab_result,test_result,text,临床检验结果记录及分析内容,业务资源 / 医疗服务(医院) / 临床服务 / 临床检验信息管理,3级,False
+surgery_record,surgery_plan,text,患者手术方案和手术过程记录,业务资源 / 医疗服务(医院) / 临床服务 / 手术信息管理,3级,False
+inpatient_order,order_content,text,住院患者医嘱内容包含用药和检查指令,业务资源 / 医疗服务(医院) / 临床服务 / 住院医嘱管理,3级,False
+medical_settlement,insurance_amount,decimal,医保结算金额,主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务,3级,False
+insurance_interface,policy_query_result,text,医保接口政策查询返回结果,业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理,3级,False
+resident_insurance,reimbursement_amount,decimal,城镇居民基本医疗保险报销审批金额,业务资源 / 医疗保障 / 城镇居民基本医疗保险 / 报销审批,3级,False
+employee_insurance,payment_base,decimal,城镇职工基本医疗保险缴费基数,业务资源 / 医疗保障 / 城镇职工基本医疗保险 / 缴费管理,1级,False
+employee_insurance,account_balance,decimal,城镇职工基本医疗保险个人账户余额查询结果,业务资源 / 医疗保障 / 城镇职工基本医疗保险 / 信息查询,2级,False
+online_medical,registration_order_no,varchar,互联网医疗服务预约挂号订单号,主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗服务,2级,False
+doctor,doctor_name,varchar,医生姓名用于医疗服务管理和沟通,基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息,3级,False
+doctor,qualification_no,varchar,医务人员执业资质证书编号,基础资源 / 服务范围与对象 / 医务人员 / 医务人员信息,3级,False
+hospital_budget,annual_budget_amount,decimal,医院年度预算金额和预算执行监控,业务资源 / 医疗服务(医院) / 运营管理 / 预算管理,3级,False
+audit_log,created_at,datetime,记录创建时间,,,True
