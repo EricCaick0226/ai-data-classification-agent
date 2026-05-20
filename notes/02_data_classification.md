@@ -4,7 +4,7 @@
 
 本项目叫：
 
-`ai-data-classification-agent`
+`metadata-classifier`
 
 最终目标是：
 

@@ -2,7 +2,7 @@
 
 ## 1. 当前项目名称
 
-`ai-data-classification-agent`
+`metadata-classifier`
 
 这个项目的最终目标不是只做一个普通的 Python 脚本，而是在 5/15 前完成一个最小可运行的 AI Agent Demo。
 
