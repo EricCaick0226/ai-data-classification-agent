@@ -24,6 +24,152 @@ LEVEL_COLUMNS = [
 
 CLASSIFICATION_SHEET_NAME = "分类"
 LEVEL_SHEET_NAME = "分级"
+MIN_CANDIDATE_SCORE = 2
+
+GENERIC_MATCH_TERMS = {
+    "患者",
+    "信息",
+    "数据",
+    "记录",
+    "时间",
+    "管理",
+    "服务",
+    "医疗",
+    "医疗服务",
+    "系统",
+    "业务",
+    "内容",
+    "结果",
+    "编号",
+    "名称",
+    "类型",
+}
+
+TERM_WEIGHTS = {
+    "身份证": 8,
+    "身份证件": 8,
+    "证件号码": 8,
+    "患者信息": 5,
+    "患者敏感信息": 8,
+    "高度私密": 5,
+    "身份识别": 5,
+    "身份确认": 5,
+    "唯一标识": 4,
+    "基本资料": 4,
+    "手机号": 7,
+    "联系电话": 7,
+    "联系方式": 5,
+    "居住地址": 7,
+    "地址": 6,
+    "姓名": 5,
+    "监护人": 5,
+    "紧急联系人": 5,
+    "出生日期": 5,
+    "就诊": 4,
+    "科室": 4,
+    "诊断结果": 10,
+    "诊断": 7,
+    "治疗方案": 10,
+    "病历": 8,
+    "主诉": 7,
+    "处方": 8,
+    "医嘱": 8,
+    "用药": 6,
+    "检验结果": 9,
+    "检验": 6,
+    "检查": 5,
+    "影像": 7,
+    "手术": 8,
+    "输血": 8,
+    "过敏史": 8,
+    "护理记录": 7,
+    "医保": 6,
+    "结算": 5,
+    "费用": 5,
+    "金额": 4,
+    "支付": 4,
+    "公共卫生": 6,
+    "随访": 6,
+    "慢病": 6,
+    "血压": 7,
+    "血糖": 7,
+    "心理健康": 8,
+    "医务人员": 6,
+    "医生": 5,
+    "执业资格": 7,
+    "绩效": 6,
+    "日志": 6,
+    "审计": 6,
+    "操作": 4,
+    "ip": 6,
+    "设备": 4,
+    "互联网": 6,
+    "问诊": 8,
+    "远程会诊": 8,
+    "药品配送": 7,
+    "科研": 6,
+    "基因": 10,
+    "临床试验": 8,
+    "生物样本": 8,
+}
+
+SOURCE_SYNONYMS = {
+    "id_card": ["身份证", "身份证件", "证件号码", "身份识别", "身份确认", "基本资料", "患者信息"],
+    "idcard": ["身份证", "身份证件", "证件号码", "身份识别", "身份确认"],
+    "身份证": ["身份识别", "身份确认", "基本资料", "患者信息"],
+    "身份证件": ["身份识别", "身份确认", "基本资料", "患者信息"],
+    "card_no": ["证件号码", "编号"],
+    "patient_id": ["患者信息", "身份识别", "唯一标识"],
+    "patient_name": ["姓名", "身份识别", "身份确认", "基本资料", "患者信息"],
+    "guardian_name": ["监护人", "姓名", "基本资料", "患者信息"],
+    "emergency_contact": ["紧急联系人", "联系方式", "基本资料", "患者信息"],
+    "phone": ["手机号", "联系电话", "联系方式", "基本资料"],
+    "mobile": ["手机号", "联系电话"],
+    "address": ["地址", "居住地址", "联系方式", "基本资料", "患者信息"],
+    "birth": ["出生日期", "基本资料", "患者信息"],
+    "doctor_name": ["医生", "医务人员", "姓名"],
+    "staff_name": ["医务人员", "姓名"],
+    "department": ["科室"],
+    "diagnosis": ["诊断", "诊断结果", "病历", "患者敏感信息", "高度私密"],
+    "treatment_plan": ["治疗方案", "患者敏感信息", "高度私密"],
+    "chief_complaint": ["主诉", "病历", "患者敏感信息", "高度私密"],
+    "visit": ["就诊"],
+    "prescription": ["处方"],
+    "medical_order": ["医嘱"],
+    "drug": ["药品", "用药"],
+    "dosage": ["用药剂量"],
+    "lab_result": ["检验结果"],
+    "abnormal": ["异常"],
+    "imaging": ["影像", "影像检查"],
+    "surgery": ["手术"],
+    "transfusion": ["输血"],
+    "allergy": ["过敏史"],
+    "nursing": ["护理记录"],
+    "insurance": ["医保"],
+    "settlement": ["结算"],
+    "amount": ["金额", "费用", "支付"],
+    "followup": ["随访"],
+    "blood_pressure": ["血压"],
+    "blood_glucose": ["血糖"],
+    "mental_health": ["心理健康"],
+    "staff": ["医务人员"],
+    "doctor": ["医生", "医务人员"],
+    "certificate": ["执业资格", "证书"],
+    "performance": ["绩效"],
+    "audit": ["审计", "日志"],
+    "log": ["日志"],
+    "operator": ["操作人"],
+    "operation": ["操作"],
+    "ip_address": ["ip", "访问地址"],
+    "device": ["设备"],
+    "consultation": ["问诊"],
+    "remote_diagnosis": ["远程会诊", "诊断"],
+    "payment": ["支付"],
+    "research": ["科研"],
+    "gene": ["基因"],
+    "trial": ["临床试验"],
+    "sample": ["生物样本", "样本"],
+}
 
 
 @dataclass
@@ -41,6 +187,9 @@ class RuleCatalog:
         return self.level_rules.get(str(security_level).strip())
 
     def get_candidate_rules(self, column_info, limit=12):
+        if _is_low_semantic_technical_field(column_info):
+            return []
+
         scored_rules = []
         source_text = _build_column_search_text(column_info)
 
@@ -57,11 +206,10 @@ class RuleCatalog:
             reverse=True,
         )
 
-        candidates = [rule for score, rule in scored_rules if score > 0][:limit]
-        if candidates:
-            return candidates
-
-        return [rule for _, rule in scored_rules[:limit]]
+        return [
+            rule for score, rule in scored_rules
+            if score >= MIN_CANDIDATE_SCORE
+        ][:limit]
 
 
 def load_rule_catalog(excel_path):
@@ -210,30 +358,76 @@ def _score_rule(source_text, rule):
         if not normalized_value:
             continue
 
-        if normalized_value in source_text:
+        if normalized_value in source_text and normalized_value not in GENERIC_MATCH_TERMS:
             score += 5
 
         for token in _tokenize(normalized_value):
-            if token and token in source_text:
-                score += 1
+            if token and token in source_text and token not in GENERIC_MATCH_TERMS:
+                score += TERM_WEIGHTS.get(token, 1)
 
     return score
 
 
 def _build_column_search_text(column_info):
-    values = [
-        column_info.get("table_name", ""),
-        column_info.get("column_name", ""),
-        column_info.get("column_type", ""),
-        column_info.get("column_description", ""),
-    ]
-    return _normalize_for_match(" ".join(str(value) for value in values))
+    values = []
+    for key in [
+        "table_name",
+        "column_name",
+        "column_type",
+        "column_description",
+        "remarks",
+    ]:
+        value = column_info.get(key)
+        if value:
+            values.append(value)
+
+    raw_text = " ".join(str(value) for value in values)
+    normalized_text = _normalize_for_match(raw_text)
+    expansions = []
+    for trigger, synonyms in SOURCE_SYNONYMS.items():
+        if trigger in normalized_text:
+            expansions.extend(synonyms)
+
+    return _normalize_for_match(" ".join([raw_text, *expansions]))
+
+
+def _is_low_semantic_technical_field(column_info):
+    column_name = _normalize_for_match(column_info.get("column_name", ""))
+    description = _normalize_for_match(column_info.get("column_description", ""))
+    technical_names = {
+        "created_at",
+        "create_time",
+        "created_time",
+        "updated_at",
+        "update_time",
+        "updated_time",
+        "deleted_at",
+        "delete_time",
+    }
+    technical_descriptions = {
+        "记录创建时间",
+        "创建时间",
+        "记录更新时间",
+        "更新时间",
+        "删除时间",
+    }
+
+    if column_name not in technical_names:
+        return False
+
+    return not description or description in technical_descriptions
 
 
 def _tokenize(value):
-    ascii_tokens = re.findall(r"[a-zA-Z0-9]+", value)
-    chinese_tokens = re.findall(r"[\u4e00-\u9fff]{2,}", value)
-    return ascii_tokens + chinese_tokens
+    ascii_tokens = [
+        token for token in re.findall(r"[a-zA-Z0-9]+", value)
+        if token not in GENERIC_MATCH_TERMS
+    ]
+    chinese_terms = [
+        term for term in TERM_WEIGHTS
+        if term in value and term not in GENERIC_MATCH_TERMS
+    ]
+    return ascii_tokens + chinese_terms
 
 
 def _normalize_for_match(value):
