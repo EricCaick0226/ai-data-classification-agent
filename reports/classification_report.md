@@ -17,15 +17,15 @@
 
 | Table | Column | Reason | Candidate Paths |
 |---|---|---|---|
-| medical_settlement | created_at | LLM confidence is below threshold. | 主题资源 / 电子健康档案数据库 / 儿童保健 / 5岁以下儿童死亡报告 |
+| medical_settlement | created_at | LLM result is missing classification_path. |  |
 
 ## Column 分类分级明细
 
 | Table | Column | Type | Description | Classification Path | Security Level | Level Name | Sharing Policy | Open Policy | Basis | Confidence | Review Required |
 |---|---|---|---|---|---|---|---|---|---|---:|---|
-| patient | patient_name | varchar | 患者姓名用于医疗服务中的身份确认 | 基础资源 / 服务范围与对象 / 患者 / 患者信息 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | patient_name 是患者身份识别的基本字段，用于医疗服务中的身份确认，符合‘患者信息’定义中‘身份识别、基本资料’和‘确保身份确认和沟通’的描述，且未涉及病历、诊断等敏感内容，故不属4级敏感信息。 | 0.95 | False |
-| patient | id_card_no | varchar | 患者身份证件号码 | 基础资源 / 服务范围与对象 / 患者 / 患者信息 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | 身份证件号码属于患者身份识别类基本资料，用于身份确认，符合'患者信息'定义；虽具敏感性，但未达到病历、诊断等高度私密程度，故不适用4级敏感信息分类 | 0.95 | False |
-| patient | diagnosis_result | text | 患者诊断结果 | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 | 4级 | 一般数据4级 | 有条件共享 | 不予开放 | diagnosis_result 字段明确表示患者诊断结果，属于病历类高度私密数据，符合候选规则中'患者敏感信息'定义 | 0.98 | False |
-| patient | treatment_plan | text | 患者治疗方案 | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 | 4级 | 一般数据4级 | 有条件共享 | 不予开放 | treatment_plan（治疗方案）属于患者高度私密的医疗数据，直接关联诊疗决策与健康状况，符合‘患者敏感信息’定义中‘诊断结果、治疗方案等高度私密数据’的描述。 | 0.98 | False |
-| medical_settlement | insurance_amount | decimal | 医保结算金额 | 业务资源 / 医疗服务(医院) / 医疗管理 / 医保接口管理 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | 字段名为insurance_amount，描述为'医保结算金额'，直接关联医保结算业务，属于医保接口管理范畴 | 0.95 | False |
+| patient | patient_name | varchar | 患者姓名用于医疗服务中的身份确认 | 基础资源 / 服务范围与对象 / 患者 / 患者信息 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | column_name='patient_name'且column_description明确指向医疗服务中的身份确认，属于患者基本身份信息，与候选规则中'患者信息'定义完全一致；该路径层级（3级）低于'患者主索引'（4级），但语义更精准匹配通用患者身份字段而非唯一主索引场景。 | 0.95 | False |
+| patient | id_card_no | varchar | 患者身份证件号码 | 基础资源 / 服务范围与对象 / 患者 / 患者信息 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | id_card_no 是患者身份的唯一法定标识，属于患者基本信息的核心字段，语义直接对应‘患者信息’分类下的身份识别要素，且该分类描述明确包含‘身份’要素，匹配度最高。 | 0.95 | False |
+| patient | diagnosis_result | text | 患者诊断结果 | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 | 4级 | 一般数据4级 | 有条件共享 | 不予开放 | column_name='diagnosis_result'且column_description='患者诊断结果'，明确指向患者个体高度私密的临床诊断内容，符合'患者敏感信息'定义中'诊断结果'这一核心要素，且该路径唯一标注为4级，强调严格保密。 | 0.98 | False |
+| patient | treatment_plan | text | 患者治疗方案 | 基础资源 / 服务范围与对象 / 患者 / 患者敏感信息 | 4级 | 一般数据4级 | 有条件共享 | 不予开放 | column_name='treatment_plan'且column_description='患者治疗方案'，明确指向患者个体化、私密性强的临床决策内容，属于患者病历核心组成部分，符合'患者敏感信息'定义中'治疗方案等高度私密数据'的描述 | 0.95 | False |
+| medical_settlement | insurance_amount | decimal | 医保结算金额 | 主题资源 / 其他数据库 / 互联网+医疗健康 / 互联网+医疗保障结算服务 | 3级 | 一般数据3级 | 有条件共享 | 有条件开放 | 字段名为insurance_amount，描述为'医保结算金额'，直接对应互联网+医疗健康场景下的医疗保障结算服务数据 | 0.95 | False |
 | medical_settlement | created_at | datetime | 记录创建时间 |  |  |  |  |  | 未形成可信分类结论，需要人工复核。 | 0 | True |

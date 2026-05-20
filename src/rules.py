@@ -25,17 +25,15 @@ LEVEL_COLUMNS = [
 CLASSIFICATION_SHEET_NAME = "分类"
 LEVEL_SHEET_NAME = "分级"
 MIN_CANDIDATE_SCORE = 2
+DEFAULT_CANDIDATE_LIMIT = 20
 
 GENERIC_MATCH_TERMS = {
-    "患者",
     "信息",
     "数据",
     "记录",
     "时间",
     "管理",
     "服务",
-    "医疗",
-    "医疗服务",
     "系统",
     "业务",
     "内容",
@@ -43,132 +41,13 @@ GENERIC_MATCH_TERMS = {
     "编号",
     "名称",
     "类型",
-}
-
-TERM_WEIGHTS = {
-    "身份证": 8,
-    "身份证件": 8,
-    "证件号码": 8,
-    "患者信息": 5,
-    "患者敏感信息": 8,
-    "高度私密": 5,
-    "身份识别": 5,
-    "身份确认": 5,
-    "唯一标识": 4,
-    "基本资料": 4,
-    "手机号": 7,
-    "联系电话": 7,
-    "联系方式": 5,
-    "居住地址": 7,
-    "地址": 6,
-    "姓名": 5,
-    "监护人": 5,
-    "紧急联系人": 5,
-    "出生日期": 5,
-    "就诊": 4,
-    "科室": 4,
-    "诊断结果": 10,
-    "诊断": 7,
-    "治疗方案": 10,
-    "病历": 8,
-    "主诉": 7,
-    "处方": 8,
-    "医嘱": 8,
-    "用药": 6,
-    "检验结果": 9,
-    "检验": 6,
-    "检查": 5,
-    "影像": 7,
-    "手术": 8,
-    "输血": 8,
-    "过敏史": 8,
-    "护理记录": 7,
-    "医保": 6,
-    "结算": 5,
-    "费用": 5,
-    "金额": 4,
-    "支付": 4,
-    "公共卫生": 6,
-    "随访": 6,
-    "慢病": 6,
-    "血压": 7,
-    "血糖": 7,
-    "心理健康": 8,
-    "医务人员": 6,
-    "医生": 5,
-    "执业资格": 7,
-    "绩效": 6,
-    "日志": 6,
-    "审计": 6,
-    "操作": 4,
-    "ip": 6,
-    "设备": 4,
-    "互联网": 6,
-    "问诊": 8,
-    "远程会诊": 8,
-    "药品配送": 7,
-    "科研": 6,
-    "基因": 10,
-    "临床试验": 8,
-    "生物样本": 8,
-}
-
-SOURCE_SYNONYMS = {
-    "id_card": ["身份证", "身份证件", "证件号码", "身份识别", "身份确认", "基本资料", "患者信息"],
-    "idcard": ["身份证", "身份证件", "证件号码", "身份识别", "身份确认"],
-    "身份证": ["身份识别", "身份确认", "基本资料", "患者信息"],
-    "身份证件": ["身份识别", "身份确认", "基本资料", "患者信息"],
-    "card_no": ["证件号码", "编号"],
-    "patient_id": ["患者信息", "身份识别", "唯一标识"],
-    "patient_name": ["姓名", "身份识别", "身份确认", "基本资料", "患者信息"],
-    "guardian_name": ["监护人", "姓名", "基本资料", "患者信息"],
-    "emergency_contact": ["紧急联系人", "联系方式", "基本资料", "患者信息"],
-    "phone": ["手机号", "联系电话", "联系方式", "基本资料"],
-    "mobile": ["手机号", "联系电话"],
-    "address": ["地址", "居住地址", "联系方式", "基本资料", "患者信息"],
-    "birth": ["出生日期", "基本资料", "患者信息"],
-    "doctor_name": ["医生", "医务人员", "姓名"],
-    "staff_name": ["医务人员", "姓名"],
-    "department": ["科室"],
-    "diagnosis": ["诊断", "诊断结果", "病历", "患者敏感信息", "高度私密"],
-    "treatment_plan": ["治疗方案", "患者敏感信息", "高度私密"],
-    "chief_complaint": ["主诉", "病历", "患者敏感信息", "高度私密"],
-    "visit": ["就诊"],
-    "prescription": ["处方"],
-    "medical_order": ["医嘱"],
-    "drug": ["药品", "用药"],
-    "dosage": ["用药剂量"],
-    "lab_result": ["检验结果"],
-    "abnormal": ["异常"],
-    "imaging": ["影像", "影像检查"],
-    "surgery": ["手术"],
-    "transfusion": ["输血"],
-    "allergy": ["过敏史"],
-    "nursing": ["护理记录"],
-    "insurance": ["医保"],
-    "settlement": ["结算"],
-    "amount": ["金额", "费用", "支付"],
-    "followup": ["随访"],
-    "blood_pressure": ["血压"],
-    "blood_glucose": ["血糖"],
-    "mental_health": ["心理健康"],
-    "staff": ["医务人员"],
-    "doctor": ["医生", "医务人员"],
-    "certificate": ["执业资格", "证书"],
-    "performance": ["绩效"],
-    "audit": ["审计", "日志"],
-    "log": ["日志"],
-    "operator": ["操作人"],
-    "operation": ["操作"],
-    "ip_address": ["ip", "访问地址"],
-    "device": ["设备"],
-    "consultation": ["问诊"],
-    "remote_diagnosis": ["远程会诊", "诊断"],
-    "payment": ["支付"],
-    "research": ["科研"],
-    "gene": ["基因"],
-    "trial": ["临床试验"],
-    "sample": ["生物样本", "样本"],
+    "相关",
+    "包括",
+    "以及",
+    "等",
+    "和",
+    "与",
+    "或",
 }
 
 
@@ -186,7 +65,7 @@ class RuleCatalog:
     def get_level_rule(self, security_level):
         return self.level_rules.get(str(security_level).strip())
 
-    def get_candidate_rules(self, column_info, limit=12):
+    def get_candidate_rules(self, column_info, limit=DEFAULT_CANDIDATE_LIMIT):
         if _is_low_semantic_technical_field(column_info):
             return []
 
@@ -200,6 +79,7 @@ class RuleCatalog:
         scored_rules.sort(
             key=lambda item: (
                 item[0],
+                len(item[1].get("match_terms", [])),
                 len(item[1]["classification_description"]),
                 item[1]["classification_path"],
             ),
@@ -321,9 +201,14 @@ def _build_classification_rules(df):
                 "classification_parts": classification_parts,
                 "recommended_level": recommended_level,
                 "classification_description": description,
+                "match_terms": _build_rule_match_terms(
+                    classification_parts=classification_parts,
+                    description=description,
+                ),
             }
         )
 
+    _prune_common_match_terms(rules)
     return rules
 
 
@@ -347,23 +232,13 @@ def _build_level_rules(df):
 
 def _score_rule(source_text, rule):
     score = 0
-    searchable_values = [
-        rule["classification_path"],
-        rule["classification_description"],
-        *rule["classification_parts"],
-    ]
 
-    for value in searchable_values:
-        normalized_value = _normalize_for_match(value)
-        if not normalized_value:
+    for term in rule.get("match_terms", []):
+        value = term["value"]
+        if value not in source_text:
             continue
 
-        if normalized_value in source_text and normalized_value not in GENERIC_MATCH_TERMS:
-            score += 5
-
-        for token in _tokenize(normalized_value):
-            if token and token in source_text and token not in GENERIC_MATCH_TERMS:
-                score += TERM_WEIGHTS.get(token, 1)
+        score += term["score"]
 
     return score
 
@@ -381,14 +256,7 @@ def _build_column_search_text(column_info):
         if value:
             values.append(value)
 
-    raw_text = " ".join(str(value) for value in values)
-    normalized_text = _normalize_for_match(raw_text)
-    expansions = []
-    for trigger, synonyms in SOURCE_SYNONYMS.items():
-        if trigger in normalized_text:
-            expansions.extend(synonyms)
-
-    return _normalize_for_match(" ".join([raw_text, *expansions]))
+    return _normalize_for_match(" ".join(str(value) for value in values))
 
 
 def _is_low_semantic_technical_field(column_info):
@@ -418,16 +286,136 @@ def _is_low_semantic_technical_field(column_info):
     return not description or description in technical_descriptions
 
 
-def _tokenize(value):
+def _build_rule_match_terms(classification_parts, description):
+    terms = {}
+    last_part_index = len(classification_parts) - 1
+
+    for index, part in enumerate(classification_parts):
+        base_score = 6 if index == last_part_index else 3
+        _add_match_term(terms, part, base_score)
+        for token in _extract_terms(part):
+            _add_match_term(terms, token, min(base_score, 3))
+
+    for token in _extract_terms(description):
+        _add_match_term(terms, token, 2)
+
+    return [
+        {"value": value, "score": score}
+        for value, score in sorted(
+            terms.items(),
+            key=lambda item: (item[1], len(item[0]), item[0]),
+            reverse=True,
+        )
+    ]
+
+
+def _prune_common_match_terms(rules):
+    term_counts = {}
+    for rule in rules:
+        for value in {term["value"] for term in rule.get("match_terms", [])}:
+            term_counts[value] = term_counts.get(value, 0) + 1
+
+    max_common_count = max(5, len(rules) // 20)
+    for rule in rules:
+        rule["match_terms"] = [
+            term for term in rule.get("match_terms", [])
+            if (
+                term["score"] >= 6
+                or term_counts.get(term["value"], 0) <= max_common_count
+            )
+            and not _is_context_fragment(term["value"])
+        ]
+
+
+def _add_match_term(terms, value, score):
+    normalized_value = _normalize_for_match(value)
+    if not _is_useful_match_term(normalized_value):
+        return
+
+    terms[normalized_value] = max(terms.get(normalized_value, 0), score)
+
+
+def _extract_terms(value):
+    normalized_value = _normalize_cell(value).lower()
+    chunks = re.findall(r"[\u4e00-\u9fff]+|[a-zA-Z0-9_]+", normalized_value)
+    terms = []
+
+    for chunk in chunks:
+        if re.fullmatch(r"[a-zA-Z0-9_]+", chunk):
+            terms.extend(_split_ascii_terms(chunk))
+            continue
+
+        terms.extend(_split_chinese_terms(chunk))
+
+    return terms
+
+
+def _split_ascii_terms(value):
     ascii_tokens = [
-        token for token in re.findall(r"[a-zA-Z0-9]+", value)
-        if token not in GENERIC_MATCH_TERMS
+        token for token in re.split(r"[_\W]+", value)
+        if _is_useful_match_term(token)
     ]
-    chinese_terms = [
-        term for term in TERM_WEIGHTS
-        if term in value and term not in GENERIC_MATCH_TERMS
+    return ascii_tokens
+
+
+def _split_chinese_terms(value):
+    delimiters = (
+        "包括",
+        "包含",
+        "用于",
+        "涉及",
+        "相关",
+        "以及",
+        "或者",
+        "及",
+        "或",
+        "和",
+        "与",
+        "等",
+        "的",
+    )
+    pattern = "|".join(re.escape(delimiter) for delimiter in delimiters)
+    parts = re.split(pattern, value)
+    terms = []
+    for part in parts:
+        if not _is_useful_match_term(part):
+            continue
+
+        terms.append(part)
+        terms.extend(_build_chinese_term_variants(part))
+
+    return list(dict.fromkeys(terms))
+
+
+def _build_chinese_term_variants(value):
+    variants = []
+
+    for suffix in ("信息", "数据", "记录", "内容", "管理"):
+        if value.endswith(suffix) and len(value) > len(suffix) + 1:
+            variants.append(value[: -len(suffix)])
+
+    if len(value) >= 4:
+        variants.append(value[:4])
+        variants.append(value[:2])
+
+    return [
+        variant for variant in variants
+        if _is_useful_match_term(variant)
     ]
-    return ascii_tokens + chinese_terms
+
+
+def _is_useful_match_term(value):
+    if not value or value in GENERIC_MATCH_TERMS:
+        return False
+
+    if re.fullmatch(r"[a-zA-Z0-9_]+", value):
+        return len(value) >= 2
+
+    return len(value) >= 2
+
+
+def _is_context_fragment(value):
+    return value.endswith(("中", "内", "过程中"))
 
 
 def _normalize_for_match(value):
